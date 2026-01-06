@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthFlow AI - Integrated Healthcare Management Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>HealthFlow AI</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#problem" class="nav-link">Problem</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#integrated-modules" class="nav-link">Modules</a></li>
+                <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#mobile-app" class="nav-link">Mobile App</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link cta-nav">Get Started</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="hero">
+        <div class="carousel-container">
+            <!-- Slide 1 -->
+            <div class="carousel-slide active fade-in">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Integrated Healthcare Management Platform</h1>
+                        <p>Automate HIV, chronic disease management, maternal health, medication adherence, and appointment scheduling – save 12-15 hours weekly.</p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary">Schedule Demo</a>
+                            <a href="#how-it-works" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop" alt="Healthcare Dashboard" class="hero-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide fade-in">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Complete Patient Management Across All Conditions</h1>
+                        <p>HIV, chronic disease (diabetes, hypertension), maternal health, and more – all in one dashboard.</p>
+                        <div class="hero-buttons">
+                            <a href="#dashboard" class="btn btn-primary">View Dashboard</a>
+                            <a href="#how-it-works" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="Patient Monitoring" class="hero-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide fade-in">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Smart Medication & Appointment Management</h1>
+                        <p>Automated reminders, adherence tracking, and appointment scheduling reduce no-shows by 25-40%.</p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary">Start Free Trial</a>
+                            <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1576091160505-2d4c6baf0f91?w=600&h=400&fit=crop" alt="Patient Communication" class="hero-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-slide fade-in">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Empower Your Healthcare Team</h1>
+                        <p>Reduce workload, improve outcomes, and transform patient care with AI-powered automation.</p>
+                        <div class="hero-buttons">
+                            <a href="#pricing" class="btn btn-primary">View Pricing</a>
+                            <a href="#about" class="btn btn-secondary">About Us</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1631217b5fcd-bc4e3f04a038?w=600&h=400&fit=crop" alt="Healthcare Team" class="hero-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-prev" onclick="moveSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-next" onclick="moveSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Carousel Dots -->
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <svg class="wave" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="white"></path>
+        </svg>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem">
+        <div class="container">
+            <h2 class="section-title">The Challenge Healthcare Teams Face</h2>
+            <div class="problem-grid">
+                <div class="problem-card slide-in-left">
+                    <div class="problem-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>2+ Hours Weekly</h3>
+                    <p>Manually compiling patient lists and tracking missed appointments</p>
+                </div>
+                <div class="problem-card slide-in-left">
+                    <div class="problem-icon">
+                        <i class="fas fa-user-times"></i>
+                    </div>
+                    <h3>High Default Rates</h3>
+                    <p>Poor follow-up leads to patients falling out of care</p>
+                </div>
+                <div class="problem-card slide-in-left">
+                    <div class="problem-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Manual Reporting</h3>
+                    <p>Time-consuming, error-prone weekly reports for supervisors</p>
+                </div>
+                <div class="problem-card slide-in-left">
+                    <div class="problem-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <h3>Missed Interventions</h3>
+                    <p>Reactive care instead of proactive patient management</p>
+                </div>
+            </div>
+            <div class="problem-solution">
+                <p><strong>Sound familiar?</strong> You're not alone. Healthcare teams across Western Uganda face the same challenges.</p>
+                <p>HealthFlow AI automates these workflows so you can focus on what matters: patient care.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How HealthFlow AI Works</h2>
+            <p class="section-subtitle">Simple automation that integrates with your existing tools</p>
+            
+            <div class="steps-container">
+                <div class="step step-1 fade-in-left">
+                    <div class="step-number">1</div>
+                    <h3>Connect Your Data</h3>
+                    <p>Link your Google Sheets patient database. No migration needed.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step step-2 fade-in-up">
+                    <div class="step-number">2</div>
+                    <h3>Intelligent Processing</h3>
+                    <p>AI identifies patients who missed appointments, have high viral loads, and need follow-ups.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step step-3 fade-in-right">
+                    <div class="step-number">3</div>
+                    <h3>Automated Follow-ups</h3>
+                    <p>Personalized WhatsApp and email reminders sent automatically to patients.</p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step step-4 fade-in-left">
+                    <div class="step-number">4</div>
+                    <h3>Weekly Reports</h3>
+                    <p>Automated supervisor reports with AI-generated insights delivered to your inbox.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step step-5 fade-in-up">
+                    <div class="step-number">5</div>
+                    <h3>Better Outcomes</h3>
+                    <p>Improved patient adherence, reduced defaults, and better health outcomes.</p>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <h3 class="grid-title">Key Features</h3>
+                <div class="features">
+                    <div class="feature-item pulse">
+                        <i class="fas fa-robot"></i>
+                        <h4>AI-Powered</h4>
+                        <p>OpenAI integration for intelligent patient insights</p>
+                    </div>
+                    <div class="feature-item pulse">
+                        <i class="fas fa-message"></i>
+                        <h4>Multi-Channel</h4>
+                        <p>WhatsApp, Email, and SMS notifications</p>
+                    </div>
+                    <div class="feature-item pulse">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>HIPAA Compliant</h4>
+                        <p>Secure data handling and encryption</p>
+                    </div>
+                    <div class="feature-item pulse">
+                        <i class="fas fa-plug"></i>
+                        <h4>Easy Integration</h4>
+                        <p>Works with Google Sheets, no technical skills needed</p>
+                    </div>
+                    <div class="feature-item pulse">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Real-Time Insights</h4>
+                        <p>Dashboard with key metrics and patient status</p>
+                    </div>
+                    <div class="feature-item pulse">
+                        <i class="fas fa-cog"></i>
+                        <h4>Customizable</h4>
+                        <p>Adapt workflows to your facility's needs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrated Modules Section -->
+    <section id="integrated-modules" class="integrated-modules">
+        <div class="container">
+            <h2 class="section-title">Comprehensive Health Management Platform</h2>
+            <p class="section-subtitle">More than just HIV management – integrated solutions for complete patient care</p>
+            
+            <div class="modules-grid">
+                <!-- HIV Management Module -->
+                <div class="module-card fade-in-left">
+                    <div class="module-icon hiv-module">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Core HIV Management</h3>
+                    <p class="module-description">Track ART adherence, monitor viral loads, and manage treatment interruptions with real-time alerts.</p>
+                    <ul class="module-features">
+                        <li><i class="fas fa-check"></i> Patient cohort tracking</li>
+                        <li><i class="fas fa-check"></i> ART adherence monitoring</li>
+                        <li><i class="fas fa-check"></i> Viral load tracking</li>
+                        <li><i class="fas fa-check"></i> Treatment interruption alerts</li>
+                    </ul>
+                </div>
+
+                <!-- Chronic Disease Module -->
+                <div class="module-card fade-in-up">
+                    <div class="module-icon chronic-module">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Chronic Disease Management</h3>
+                    <p class="module-description">Monitor diabetes and hypertension patients with automated vital signs tracking and comorbidity alerts.</p>
+                    <ul class="module-features">
+                        <li><i class="fas fa-check"></i> Diabetes & hypertension tracking</li>
+                        <li><i class="fas fa-check"></i> Medication monitoring</li>
+                        <li><i class="fas fa-check"></i> Vital signs integration</li>
+                        <li><i class="fas fa-check"></i> Comorbidity risk alerts</li>
+                    </ul>
+                </div>
+
+                <!-- Maternal Health Module -->
+                <div class="module-card fade-in-right">
+                    <div class="module-icon maternal-module">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Maternal Health Tracking</h3>
+                    <p class="module-description">Manage PMTCT programs with antenatal care scheduling, postnatal follow-ups, and infant prophylaxis tracking.</p>
+                    <ul class="module-features">
+                        <li><i class="fas fa-check"></i> PMTCT monitoring</li>
+                        <li><i class="fas fa-check"></i> Antenatal care scheduling</li>
+                        <li><i class="fas fa-check"></i> Postnatal follow-up tracking</li>
+                        <li><i class="fas fa-check"></i> Infant prophylaxis adherence</li>
+                    </ul>
+                </div>
+
+                <!-- Medication Adherence Module -->
+                <div class="module-card fade-in-left">
+                    <div class="module-icon adherence-module">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Medication Adherence System</h3>
+                    <p class="module-description">AI-powered reminders via WhatsApp and SMS, adherence analysis, and personalized patient engagement.</p>
+                    <ul class="module-features">
+                        <li><i class="fas fa-check"></i> AI-powered WhatsApp & SMS reminders</li>
+                        <li><i class="fas fa-check"></i> Adherence pattern analysis</li>
+                        <li><i class="fas fa-check"></i> Early warning system</li>
+                        <li><i class="fas fa-check"></i> Caregiver engagement tools</li>
+                    </ul>
+                </div>
+
+                <!-- Appointment Management Module -->
+                <div class="module-card fade-in-up">
+                    <div class="module-icon appointment-module">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Clinic Appointment Management</h3>
+                    <p class="module-description">Reduce no-shows with automated scheduling, multi-day reminders, and predictive analytics.</p>
+                    <ul class="module-features">
+                        <li><i class="fas fa-check"></i> Automated appointment scheduling</li>
+                        <li><i class="fas fa-check"></i> Multi-day reminder system</li>
+                        <li><i class="fas fa-check"></i> No-show prediction</li>
+                        <li><i class="fas fa-check"></i> Clinic resource optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Integration Hub -->
+                <div class="module-card fade-in-right">
+                    <div class="module-icon integration-module">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Unified Integration Hub</h3>
+                    <p class="module-description">All modules work seamlessly together, providing a single source of truth for patient care management.</p>
+                    <ul class="module-features">
+                        <li><i class="fas fa-check"></i> Cross-module patient data sync</li>
+                        <li><i class="fas fa-check"></i> Unified patient dashboard</li>
+                        <li><i class="fas fa-check"></i> Automated reporting across all areas</li>
+                        <li><i class="fas fa-check"></i> No duplicate data entry</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="modules-summary">
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h4>Save 12-15 Hours Monthly</h4>
+                        <p>vs. 8-10 hours with HIV-only solutions. Manage multiple health conditions in one integrated platform.</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h4>70% Cheaper Than EHRs</h4>
+                        <p>Replace 4-5 separate single-purpose systems with one integrated, cost-effective platform.</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h4>Improve Health Outcomes</h4>
+                        <p>Better adherence, fewer missed appointments, and improved clinical outcomes across all patient populations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">What You'll Gain</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card slide-in-left">
+                    <div class="benefit-number">8-10 hrs</div>
+                    <p>Monthly time savings per staff member</p>
+                </div>
+                <div class="benefit-card slide-in-left">
+                    <div class="benefit-number">30%+</div>
+                    <p>Reduction in patient default rates</p>
+                </div>
+                <div class="benefit-card slide-in-left">
+                    <div class="benefit-number">99%</div>
+                    <p>Reporting accuracy improvement</p>
+                </div>
+                <div class="benefit-card slide-in-left">
+                    <div class="benefit-number">1 Click</div>
+                    <p>Weekly reports delivered automatically</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle">Choose the plan that fits your facility</p>
+            
+            <div class="pricing-grid">
+                <!-- Bronze Tier -->
+                <div class="pricing-card bronze-tier slide-in-left">
+                    <div class="pricing-header">
+                        <h3>Bronze</h3>
+                        <p class="subtitle">Small Clinics & NGOs</p>
+                    </div>
+                    <div class="pricing-amount">
+                        <span class="currency">UGX</span>
+                        <span class="price">1,397,000</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Up to 500 patients</li>
+                            <li><i class="fas fa-check"></i> Weekly automated reports</li>
+                            <li><i class="fas fa-check"></i> WhatsApp notifications</li>
+                            <li><i class="fas fa-check"></i> Email reminders</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-outline" onclick="scrollToContact()">Get Started</button>
+                    <div class="setup-fee">+ UGX 7,000,000 setup fee</div>
+                </div>
+
+                <!-- Silver Tier -->
+                <div class="pricing-card silver-tier popular slide-in-up">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Silver</h3>
+                        <p class="subtitle">Hospitals & District Programs</p>
+                    </div>
+                    <div class="pricing-amount">
+                        <span class="currency">UGX</span>
+                        <span class="price">2,796,000</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Up to 2,000 patients</li>
+                            <li><i class="fas fa-check"></i> Daily automated reports</li>
+                            <li><i class="fas fa-check"></i> WhatsApp & Email</li>
+                            <li><i class="fas fa-check"></i> AI-generated insights</li>
+                            <li><i class="fas fa-check"></i> Priority phone support</li>
+                            <li><i class="fas fa-check"></i> Customization</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary" onclick="scrollToContact()">Schedule Demo</button>
+                    <div class="setup-fee">+ UGX 14,000,000 setup fee</div>
+                </div>
+
+                <!-- Gold Tier -->
+                <div class="pricing-card gold-tier slide-in-right">
+                    <div class="pricing-header">
+                        <h3>Gold</h3>
+                        <p class="subtitle">Multi-Facility Networks</p>
+                    </div>
+                    <div class="pricing-amount">
+                        <span class="currency">UGX</span>
+                        <span class="price">5,250,000</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Unlimited patients</li>
+                            <li><i class="fas fa-check"></i> Multi-facility dashboard</li>
+                            <li><i class="fas fa-check"></i> Real-time analytics</li>
+                            <li><i class="fas fa-check"></i> SMS integration</li>
+                            <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                            <li><i class="fas fa-check"></i> Advanced customization</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-outline" onclick="scrollToContact()">Get Started</button>
+                    <div class="setup-fee">+ UGX 28,000,000 setup fee</div>
+                </div>
+            </div>
+
+            <div class="pricing-faq">
+                <p><strong>Questions about pricing?</strong> All plans include 14-day free trial. No credit card required.</p>
+                <a href="#contact" class="link-button">Contact us for custom quotes →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section id="about" class="trust">
+        <div class="container">
+            <h2 class="section-title">Why Choose HealthFlow AI?</h2>
+            
+            <div class="trust-grid">
+                <div class="trust-card fade-in-left">
+                    <div class="trust-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Purpose-Built for HIV Care</h3>
+                    <p>Not a generic tool. Every feature is designed specifically for HIV patient management workflows in resource-constrained settings.</p>
+                </div>
+                <div class="trust-card fade-in-up">
+                    <div class="trust-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Data Security First</h3>
+                    <p>HIPAA-compliant. Your patient data is encrypted, backed up, and protected. We take privacy seriously.</p>
+                </div>
+                <div class="trust-card fade-in-right">
+                    <div class="trust-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Local Support</h3>
+                    <p>WhatsApp, phone, and email support in English and local languages. We understand your context.</p>
+                </div>
+                <div class="trust-card fade-in-left">
+                    <div class="trust-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Training & Onboarding</h3>
+                    <p>Free training for your team. We ensure successful implementation, not just software delivery.</p>
+                </div>
+                <div class="trust-card fade-in-up">
+                    <div class="trust-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Continuous Improvement</h3>
+                    <p>Regular updates based on user feedback. Your success is our success.</p>
+                </div>
+                <div class="trust-card fade-in-right">
+                    <div class="trust-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Proven ROI</h3>
+                    <p>70% cheaper than EHR systems. Most customers recover their investment in the first month.</p>
+                </div>
+            </div>
+
+            <div class="team-section">
+                <div class="team-image">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="Healthcare Team" class="team-img">
+                </div>
+                <div class="team-content">
+                    <h3>About Our Team</h3>
+                    <p>HealthFlow AI is built by healthcare technology professionals with deep experience in HIV care, automation, and resource-constrained settings. We've worked with 50+ healthcare facilities across East Africa to understand your challenges firsthand.</p>
+                    <p>Our mission: <strong>Empower healthcare teams to do more with less.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patients Dashboard Section -->
+    <section id="dashboard" class="patients-dashboard">
+        <div class="container">
+            <h2 class="section-title">Patients Dashboard</h2>
+            <p class="section-subtitle">Real-time visibility and control over your entire patient population</p>
+            
+            <div class="dashboard-container fade-in">
+                <!-- Dashboard Header Stats -->
+                <div class="dashboard-header-stats">
+                    <div class="header-stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #16A085, #1ABC9C);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">2,450</span>
+                            <span class="stat-text">Active Patients</span>
+                        </div>
+                    </div>
+                    <div class="header-stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #27AE60, #52BE80);">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">1,842</span>
+                            <span class="stat-text">Virally Suppressed</span>
+                        </div>
+                    </div>
+                    <div class="header-stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #E74C3C, #EC7063);">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">156</span>
+                            <span class="stat-text">Needs Attention</span>
+                        </div>
+                    </div>
+                    <div class="header-stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #3498DB, #5DADE2);">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">78</span>
+                            <span class="stat-text">This Week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Mockup -->
+                <div class="dashboard-mockup">
+                    <div class="mockup-frame">
+                        <div class="mockup-header">
+                            <div class="header-left">
+                                <h3>Patient Population</h3>
+                                <p>Last 30 days</p>
+                            </div>
+                            <div class="header-right">
+                                <button class="mockup-btn">Filter</button>
+                                <button class="mockup-btn">Export</button>
+                            </div>
+                        </div>
+
+                        <div class="mockup-content">
+                            <div class="metric-row">
+                                <div class="metric">
+                                    <div class="metric-label">Adherence Rate</div>
+                                    <div class="metric-bar">
+                                        <div class="progress-bar" style="width: 98%;">
+                                            <span>98.2%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-label">Treatment Success</div>
+                                    <div class="metric-bar">
+                                        <div class="progress-bar success" style="width: 75%;">
+                                            <span>75.2%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="status-grid">
+                                <div class="status-item">
+                                    <div class="status-icon success">✓</div>
+                                    <div class="status-text">
+                                        <div class="status-count">1,842</div>
+                                        <div class="status-label">On Treatment</div>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-icon warning">!</div>
+                                    <div class="status-text">
+                                        <div class="status-count">42</div>
+                                        <div class="status-label">High Viral Load</div>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-icon danger">✗</div>
+                                    <div class="status-text">
+                                        <div class="status-count">156</div>
+                                        <div class="status-label">Missed Appointments</div>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-icon info">⟳</div>
+                                    <div class="status-text">
+                                        <div class="status-count">34</div>
+                                        <div class="status-label">Refill Due</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="patient-list">
+                                <div class="list-header">
+                                    <span class="col col-1">Patient</span>
+                                    <span class="col col-2">Status</span>
+                                    <span class="col col-3">Last Visit</span>
+                                    <span class="col col-4">Action</span>
+                                </div>
+                                <div class="list-item">
+                                    <span class="col col-1">Jane Nambi</span>
+                                    <span class="col col-2"><span class="badge success">Active</span></span>
+                                    <span class="col col-3">3 days ago</span>
+                                    <span class="col col-4"><i class="fas fa-chevron-right"></i></span>
+                                </div>
+                                <div class="list-item">
+                                    <span class="col col-1">Joseph Karim</span>
+                                    <span class="col col-2"><span class="badge warning">At Risk</span></span>
+                                    <span class="col col-3">14 days ago</span>
+                                    <span class="col col-4"><i class="fas fa-chevron-right"></i></span>
+                                </div>
+                                <div class="list-item">
+                                    <span class="col col-1">Mary Akello</span>
+                                    <span class="col col-2"><span class="badge success">Active</span></span>
+                                    <span class="col col-3">1 day ago</span>
+                                    <span class="col col-4"><i class="fas fa-chevron-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Features -->
+                <div class="dashboard-benefits">
+                    <h3>Why Teams Love Our Dashboard</h3>
+                    <div class="benefits-cards">
+                        <div class="benefit-card-item fade-in-left">
+                            <div class="benefit-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <h4>Real-Time Updates</h4>
+                            <p>Patient data syncs automatically with your Google Sheets every hour</p>
+                        </div>
+                        <div class="benefit-card-item fade-in-up">
+                            <div class="benefit-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <h4>Smart Alerts</h4>
+                            <p>Get notified instantly when patients need intervention</p>
+                        </div>
+                        <div class="benefit-card-item fade-in-right">
+                            <div class="benefit-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <h4>One-Click Reports</h4>
+                            <p>Export data for supervisory meetings in seconds</p>
+                        </div>
+                        <div class="benefit-card-item fade-in-left">
+                            <div class="benefit-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Mobile Access</h4>
+                            <p>Full dashboard on smartphones - manage patients anywhere</p>
+                        </div>
+                        <div class="benefit-card-item fade-in-up">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Data Security</h4>
+                            <p>HIPAA-compliant encryption protects patient privacy</p>
+                        </div>
+                        <div class="benefit-card-item fade-in-right">
+                            <div class="benefit-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4>AI Insights</h4>
+                            <p>AI-generated recommendations for patient management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile App Section -->
+    <section id="mobile-app" class="mobile-app">
+        <div class="container">
+            <h2 class="section-title">Free Mobile App for On-The-Go Access</h2>
+            <p class="section-subtitle">Manage patient care anytime, anywhere from your smartphone</p>
+            
+            <div class="mobile-app-wrapper">
+                <div class="mobile-app-content fade-in-left">
+                    <h3>Stay Connected to Your Patients</h3>
+                    <p>The HealthFlow AI mobile app gives you instant access to your patients dashboard, appointment schedules, and patient alerts - all from your pocket.</p>
+                    
+                    <div class="app-features">
+                        <div class="app-feature">
+                            <i class="fas fa-smartphone"></i>
+                            <div>
+                                <h4>Full Dashboard Access</h4>
+                                <p>View all patient metrics and KPIs in real-time</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-bell"></i>
+                            <div>
+                                <h4>Push Notifications</h4>
+                                <p>Get instant alerts for missed appointments and urgent cases</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-user-circle"></i>
+                            <div>
+                                <h4>Patient Profiles</h4>
+                                <p>Quick access to patient history and current status</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-check-square"></i>
+                            <div>
+                                <h4>Quick Actions</h4>
+                                <p>Mark appointments, update status, and send reminders</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-wifi"></i>
+                            <div>
+                                <h4>Offline Mode</h4>
+                                <p>Works even with poor internet connectivity</p>
+                            </div>
+                        </div>
+                        <div class="app-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Secure & Private</h4>
+                                <p>End-to-end encryption for all patient data</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="app-cta">
+                        <p><strong>Available for iOS and Android</strong></p>
+                        <div class="app-buttons">
+                            <a href="#contact" class="app-store-btn ios">
+                                <i class="fab fa-apple"></i>
+                                <div>
+                                    <span>Download on</span>
+                                    <strong>App Store</strong>
+                                </div>
+                            </a>
+                            <a href="#contact" class="app-store-btn android">
+                                <i class="fab fa-google-play"></i>
+                                <div>
+                                    <span>Get it on</span>
+                                    <strong>Google Play</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <p class="app-note">Always FREE with any HealthFlow AI plan</p>
+                    </div>
+                </div>
+
+                <div class="mobile-app-image fade-in-right">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="screen-header">
+                                    <i class="fas fa-bars"></i>
+                                    <span>HealthFlow AI</span>
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <div class="screen-content">
+                                    <div class="stat-card">
+                                        <span>2,450</span>
+                                        <small>Active Patients</small>
+                                    </div>
+                                    <div class="stat-card">
+                                        <span>156</span>
+                                        <small>Missed Appts</small>
+                                    </div>
+                                    <div class="stat-card">
+                                        <span>98.2%</span>
+                                        <small>Adherence</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Healthcare Operations?</h2>
+            <p>Join healthcare facilities across Western Uganda automating HIV, chronic disease, maternal health, medication adherence, and appointments – all on one integrated platform.</p>
+            <a href="#contact" class="btn btn-large">Schedule Your Free Demo Today</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-header fade-in">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">We're here to answer your questions and schedule a personalized demo</p>
+                
+                <div class="contact-trust-badges">
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>14-Day Free Trial</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-credit-card"></i>
+                        <span>No Credit Card Required</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-headset"></i>
+                        <span>Expert Support</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper slide-in-left">
+                    <div class="form-header">
+                        <h3>Schedule Your Demo</h3>
+                        <p>Fill out the form below and our team will contact you within 2 hours</p>
+                    </div>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="facility">Facility/Organization *</label>
+                                <input type="text" id="facility" name="facility" placeholder="Clinic or hospital name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number (WhatsApp) *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+256..." required>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="patients">Total Patients Managed (All Conditions) *</label>
+                            <select id="patients" name="patients" required>
+                                <option value="">Select patient range...</option>
+                                <option value="100-500">100-500</option>
+                                <option value="500-2000">500-2,000</option>
+                                <option value="2000-5000">2,000-5,000</option>
+                                <option value="5000+">5,000+</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Additional Information</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your needs or ask any questions..."></textarea>
+                        </div>
+                        <div class="form-group checkbox full-width">
+                            <input type="checkbox" id="demo" name="demo" checked>
+                            <label for="demo">I'd like to schedule a personalized demo call</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-wrapper slide-in-right">
+                    <div class="info-section">
+                        <h3>Quick Links</h3>
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <div class="info-icon email">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-details">
+                                    <h4>Email Us</h4>
+                                    <a href="mailto:info@healthflow.ai">info@healthflow.ai</a>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="info-details">
+                                    <h4>WhatsApp</h4>
+                                    <a href="https://wa.me/256702XXXXXX" target="_blank">+256 702 XXX XXX</a>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-details">
+                                    <h4>Based In</h4>
+                                    <p>Mbarara, Western Uganda</p>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon clock">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="info-details">
+                                    <h4>Response Time</h4>
+                                    <p>Usually within 2 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="info-section faq-section">
+                        <h3>Common Questions</h3>
+                        <div class="faq-items">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <i class="fas fa-question-circle"></i>
+                                    How long is the setup process?
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Setup takes 2-3 days. We handle data import and team training at no extra cost.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <i class="fas fa-question-circle"></i>
+                                    Do you offer training?
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes! Free onboarding and training for your entire team included with all plans.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <i class="fas fa-question-circle"></i>
+                                    Can I cancel anytime?
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes, cancel at any time. No long-term contracts or hidden fees.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>HealthFlow AI</h4>
+                    <p>Integrated healthcare management platform for HIV, chronic disease, maternal health, and more across Western Uganda.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">HIPAA Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HealthFlow AI. All rights reserved. | Bringing healthcare into the digital age.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
