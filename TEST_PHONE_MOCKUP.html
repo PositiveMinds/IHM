@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Mockup Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0066ff;
+            margin-bottom: 20px;
+        }
+        .test-status {
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #0066ff;
+            background: #f0f5ff;
+            border-radius: 4px;
+        }
+        .test-status.success {
+            border-left-color: #27ae60;
+            background: #f0fff4;
+        }
+        .test-status.error {
+            border-left-color: #e74c3c;
+            background: #fff5f5;
+        }
+        button {
+            background: #0066ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0052cc;
+        }
+        .demo-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .demo-link:hover {
+            background: #229954;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Phone Mockup Test & Verification</h1>
+        
+        <div id="status1" class="test-status">
+            <strong>Testing JavaScript Execution...</strong>
+            <p id="status1-msg">Initializing tests...</p>
+        </div>
+
+        <div id="status2" class="test-status">
+            <strong>Testing Phone Elements...</strong>
+            <p id="status2-msg">Waiting for tests...</p>
+        </div>
+
+        <div id="status3" class="test-status">
+            <strong>Testing Event Listeners...</strong>
+            <p id="status3-msg">Waiting for tests...</p>
+        </div>
+
+        <h2 style="margin-top: 30px; color: #333;">Test Functions</h2>
+        <button onclick="testPhoneElements()">Test Phone Elements</button>
+        <button onclick="testEventListeners()">Test Event Listeners</button>
+        <button onclick="testHamburgerClick()">Test Hamburger Click</button>
+        <button onclick="clearTests()">Clear All</button>
+
+        <a href="index.html#home" class="demo-link">← Back to Full Page Demo</a>
+    </div>
+
+    <script>
+        // Test 1: JavaScript Execution
+        const status1 = document.getElementById('status1');
+        const status1Msg = document.getElementById('status1-msg');
+        
+        status1.classList.add('success');
+        status1Msg.innerHTML = '✓ JavaScript is running successfully!';
+
+        // Test 2: Phone Elements
+        function testPhoneElements() {
+            const status2 = document.getElementById('status2');
+            const status2Msg = document.getElementById('status2-msg');
+            
+            const phoneHamburger = document.getElementById('phoneHamburger');
+            const phoneSidebar = document.getElementById('phoneSidebar');
+            const phoneMainContent = document.getElementById('phoneMainContent');
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+            let allFound = phoneHamburger && phoneSidebar && phoneMainContent && sidebarItems.length > 0;
+
+            if (allFound) {
+                status2.classList.remove('error');
+                status2.classList.add('success');
+                status2Msg.innerHTML = `✓ All phone elements found!<br>
+                    - Hamburger: Found<br>
+                    - Sidebar: Found<br>
+                    - Main Content: Found<br>
+                    - Menu Items: ${sidebarItems.length} found`;
+            } else {
+                status2.classList.remove('success');
+                status2.classList.add('error');
+                status2Msg.innerHTML = `✗ Missing elements:<br>
+                    - Hamburger: ${phoneHamburger ? 'Found' : 'NOT FOUND'}<br>
+                    - Sidebar: ${phoneSidebar ? 'Found' : 'NOT FOUND'}<br>
+                    - Main Content: ${phoneMainContent ? 'Found' : 'NOT FOUND'}<br>
+                    - Menu Items: ${sidebarItems.length} found`;
+            }
+        }
+
+        // Test 3: Event Listeners
+        function testEventListeners() {
+            const status3 = document.getElementById('status3');
+            const status3Msg = document.getElementById('status3-msg');
+            
+            const phoneHamburger = document.getElementById('phoneHamburger');
+            
+            if (!phoneHamburger) {
+                status3.classList.remove('success');
+                status3.classList.add('error');
+                status3Msg.innerHTML = '✗ Phone hamburger element not found!';
+                return;
+            }
+
+            // Check if element has click handler by testing it
+            let clickWorks = false;
+            const originalClass = phoneHamburger.className;
+            
+            phoneHamburger.click();
+            
+            if (phoneHamburger.classList.contains('active')) {
+                clickWorks = true;
+                phoneHamburger.click(); // Click again to reset
+            }
+
+            if (clickWorks) {
+                status3.classList.remove('error');
+                status3.classList.add('success');
+                status3Msg.innerHTML = '✓ Event listeners are properly attached!<br>Hamburger is responsive to clicks.';
+            } else {
+                status3.classList.remove('success');
+                status3.classList.add('error');
+                status3Msg.innerHTML = '✗ Event listeners may not be working properly.<br>Try refreshing the page.';
+            }
+        }
+
+        // Test 4: Hamburger Click
+        function testHamburgerClick() {
+            const phoneHamburger = document.getElementById('phoneHamburger');
+            const phoneSidebar = document.getElementById('phoneSidebar');
+            
+            if (phoneHamburger && phoneSidebar) {
+                phoneHamburger.click();
+                alert('Hamburger clicked! Check if:\n1. Hamburger icon animated to X\n2. Sidebar slid in from left');
+            } else {
+                alert('Phone elements not found!');
+            }
+        }
+
+        // Clear tests
+        function clearTests() {
+            document.getElementById('status1').className = 'test-status';
+            document.getElementById('status2').className = 'test-status';
+            document.getElementById('status3').className = 'test-status';
+            document.getElementById('status1-msg').innerHTML = 'Waiting for tests...';
+            document.getElementById('status2-msg').innerHTML = 'Waiting for tests...';
+            document.getElementById('status3-msg').innerHTML = 'Waiting for tests...';
+        }
+
+        // Run tests on page load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                console.log('Running automatic tests...');
+                testPhoneElements();
+                testEventListeners();
+            }, 500);
+        });
+    </script>
+</body>
+</html>

@@ -58,11 +58,11 @@ if (document.readyState === 'loading') {
 }
 
 function initCarousel() {
-    startAutoSlide();
-    
-    // Pause carousel on hover
     const carousel = document.querySelector('.carousel-container');
     if (carousel) {
+        startAutoSlide();
+        
+        // Pause carousel on hover
         carousel.addEventListener('mouseenter', () => {
             carouselPaused = true;
             clearTimeout(slideTimer);
@@ -303,24 +303,26 @@ let benefitsAnimated = false;
 
 if (benefitNumbers.length > 0) {
     const benefitsSection = document.querySelector('.benefits');
-    const benefitsObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !benefitsAnimated) {
-                benefitsAnimated = true;
-                // Extract numbers and animate them
-                benefitNumbers.forEach(el => {
-                    const text = el.textContent;
-                    const numbers = text.match(/\d+/);
-                    if (numbers) {
-                        const target = parseInt(numbers[0]);
-                        animateCounter(el, target);
-                    }
-                });
-            }
-        });
-    }, { threshold: 0.5 });
+    if (benefitsSection) {
+        const benefitsObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !benefitsAnimated) {
+                    benefitsAnimated = true;
+                    // Extract numbers and animate them
+                    benefitNumbers.forEach(el => {
+                        const text = el.textContent;
+                        const numbers = text.match(/\d+/);
+                        if (numbers) {
+                            const target = parseInt(numbers[0]);
+                            animateCounter(el, target);
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
 
-    benefitsObserver.observe(benefitsSection);
+        benefitsObserver.observe(benefitsSection);
+    }
 }
 
 // Parallax Effect (Optional)
@@ -373,7 +375,25 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
     createTestimonialCarousel();
     initTooltips();
+    highlightActiveNavLink();
 });
+
+// Highlight Active Navigation Link
+function highlightActiveNavLink() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href').split('/').pop();
+        
+        // Compare the paths
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
 
 // Add keyboard navigation
 document.addEventListener('keydown', (e) => {
@@ -409,27 +429,61 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
 
 images.forEach(img => imageObserver.observe(img));
 
-// Phone Mockup Functionality
+// ============================================
+// ACCORDION FUNCTIONALITY
+// ============================================
+
+function toggleAccordion(header) {
+    const accordionItem = header.closest('.accordion-item');
+    const isActive = accordionItem.classList.contains('active');
+    
+    // Close all accordion items
+    document.querySelectorAll('.accordion-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    // Open clicked item if it wasn't active
+    if (!isActive) {
+        accordionItem.classList.add('active');
+    }
+}
+
+// ============================================
+// PHONE MOCKUP FUNCTIONALITY
+// ============================================
+
 function initPhoneMockup() {
+    console.log('Initializing phone mockup...');
+    
     const phoneHamburger = document.getElementById('phoneHamburger');
     const phoneSidebar = document.getElementById('phoneSidebar');
     const closeSidebar = document.getElementById('closeSidebar');
     const phoneMainContent = document.getElementById('phoneMainContent');
 
-    if (!phoneHamburger) return;
+    if (!phoneHamburger) {
+        console.log('Phone hamburger element not found');
+        return;
+    }
+
+    console.log('Phone elements found, attaching event listeners');
 
     // Toggle sidebar when hamburger is clicked
     phoneHamburger.addEventListener('click', function(e) {
+        e.preventDefault();
         e.stopPropagation();
+        console.log('Hamburger clicked!');
         phoneHamburger.classList.toggle('active');
         phoneSidebar.classList.toggle('active');
-        console.log('Hamburger clicked, sidebar active:', phoneSidebar.classList.contains('active'));
+        console.log('Hamburger active:', phoneHamburger.classList.contains('active'));
+        console.log('Sidebar active:', phoneSidebar.classList.contains('active'));
     });
 
     // Close sidebar when close button is clicked
     if (closeSidebar) {
         closeSidebar.addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
+            console.log('Close button clicked');
             phoneHamburger.classList.remove('active');
             phoneSidebar.classList.remove('active');
         });
@@ -437,10 +491,13 @@ function initPhoneMockup() {
 
     // Handle sidebar menu item clicks
     const sidebarItems = document.querySelectorAll('.sidebar-item');
-    sidebarItems.forEach(item => {
+    console.log('Found', sidebarItems.length, 'sidebar items');
+    
+    sidebarItems.forEach((item, index) => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
+            console.log('Menu item clicked:', index);
             
             // Remove active class from all items
             sidebarItems.forEach(si => si.classList.remove('active'));
@@ -452,30 +509,49 @@ function initPhoneMockup() {
             phoneHamburger.classList.remove('active');
             phoneSidebar.classList.remove('active');
             
-            // TODO: Switch views based on menu item clicked
-            // For now, just show the analytics view
+            // Show analytics view
             const analyticsViews = phoneMainContent.querySelectorAll('.analytics-view');
             analyticsViews.forEach(view => view.classList.remove('active'));
-            analyticsViews[0].classList.add('active');
+            if (analyticsViews.length > 0) {
+                analyticsViews[0].classList.add('active');
+            }
         });
     });
 
     // Close sidebar when clicking on main content area
     if (phoneMainContent) {
-        phoneMainContent.addEventListener('click', () => {
+        phoneMainContent.addEventListener('click', function(e) {
             if (phoneSidebar.classList.contains('active')) {
+                console.log('Clicked on main content, closing sidebar');
                 phoneHamburger.classList.remove('active');
                 phoneSidebar.classList.remove('active');
             }
         });
     }
-}
 
-// Initialize on DOM ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initPhoneMockup);
-} else {
-    initPhoneMockup();
+    // Handle bottom navbar clicks
+    const phoneFrame = phoneHamburger.closest('.phone-frame');
+    if (phoneFrame) {
+        const bottomNavbar = phoneFrame.querySelector('.phone-bottom-navbar');
+        if (bottomNavbar) {
+            const navItems = bottomNavbar.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const navName = item.getAttribute('data-nav');
+                    console.log('Bottom nav clicked:', navName);
+                    
+                    // Remove active from all items
+                    navItems.forEach(ni => ni.classList.remove('active'));
+                    
+                    // Add active to clicked item
+                    item.classList.add('active');
+                });
+            });
+        }
+    }
+
+    console.log('Phone mockup initialized successfully');
 }
 
 // Animate chart bars on page load
@@ -492,18 +568,168 @@ function animateChartBars() {
 }
 
 // Trigger chart animation when phone mockup section is visible
-const phoneSection = document.querySelector('.phone-demo-section');
-if (phoneSection) {
-    const phoneSectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateChartBars();
-                phoneSectionObserver.unobserve(entry.target);
+function setupPhoneObserver() {
+    const phoneSection = document.querySelector('.phone-demo-section');
+    if (phoneSection) {
+        const phoneSectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log('Phone demo section visible, animating chart bars');
+                    animateChartBars();
+                    phoneSectionObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        phoneSectionObserver.observe(phoneSection);
+    }
+}
+
+// Initialize mobile app phone mockup (for mobile-app.html)
+function initMobileAppPhoneMockup() {
+    console.log('Initializing mobile app phone mockup...');
+    
+    const phoneHamburger = document.getElementById('phoneHamburgerMobileApp');
+    const phoneSidebar = document.getElementById('phoneSidebarMobileApp');
+    const closeSidebar = document.getElementById('closeSidebarMobileApp');
+    const phoneMainContent = document.getElementById('phoneMainContentMobileApp');
+
+    if (!phoneHamburger) {
+        console.log('Mobile app phone hamburger element not found');
+        return;
+    }
+
+    console.log('Mobile app phone elements found, attaching event listeners');
+
+    // Toggle sidebar when hamburger is clicked
+    phoneHamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Mobile app hamburger clicked!');
+        phoneHamburger.classList.toggle('active');
+        phoneSidebar.classList.toggle('active');
+    });
+
+    // Close sidebar when close button is clicked
+    if (closeSidebar) {
+        closeSidebar.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            phoneHamburger.classList.remove('active');
+            phoneSidebar.classList.remove('active');
+        });
+    }
+
+    // Handle sidebar menu item clicks
+    const sidebarItems = document.querySelectorAll('#phoneSidebarMobileApp .sidebar-item');
+    console.log('Found', sidebarItems.length, 'mobile app sidebar items');
+    
+    sidebarItems.forEach((item, index) => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Remove active class from all items
+            sidebarItems.forEach(si => si.classList.remove('active'));
+            
+            // Add active class to clicked item
+            item.classList.add('active');
+            
+            // Close sidebar
+            phoneHamburger.classList.remove('active');
+            phoneSidebar.classList.remove('active');
+        });
+    });
+
+    // Close sidebar when clicking on main content area
+    if (phoneMainContent) {
+        phoneMainContent.addEventListener('click', function(e) {
+            if (phoneSidebar.classList.contains('active')) {
+                phoneHamburger.classList.remove('active');
+                phoneSidebar.classList.remove('active');
             }
         });
-    }, { threshold: 0.5 });
+    }
 
-    phoneSectionObserver.observe(phoneSection);
+    // Handle bottom navbar clicks
+    const phoneFrame = phoneHamburger.closest('.phone-frame');
+    if (phoneFrame) {
+        const bottomNavbar = phoneFrame.querySelector('.phone-bottom-navbar');
+        if (bottomNavbar) {
+            const navItems = bottomNavbar.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const navName = item.getAttribute('data-nav');
+                    console.log('Mobile app bottom nav clicked:', navName);
+                    
+                    // Remove active from all items
+                    navItems.forEach(ni => ni.classList.remove('active'));
+                    
+                    // Add active to clicked item
+                    item.classList.add('active');
+                });
+            });
+        }
+    }
+
+    console.log('Mobile app phone mockup initialized successfully');
 }
+
+// Initialize phone mockup when DOM is ready
+if (document.readyState === 'loading') {
+    console.log('DOM still loading, waiting for DOMContentLoaded');
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('DOMContentLoaded fired');
+        initPhoneMockup();
+        initMobileAppPhoneMockup();
+        setupPhoneObserver();
+    });
+} else {
+    console.log('DOM already loaded');
+    initPhoneMockup();
+    initMobileAppPhoneMockup();
+    setupPhoneObserver();
+}
+
+// Also initialize on window load as backup
+window.addEventListener('load', () => {
+    console.log('Window load event fired');
+    initPhoneMockup();
+    initMobileAppPhoneMockup();
+    setupPhoneObserver();
+});
+
+// FAB Button Functionality
+function initFAB() {
+    const fabMain = document.getElementById('fabMain');
+    const fabMenu = document.getElementById('fabMenu');
+    
+    if (!fabMain || !fabMenu) return;
+    
+    // Toggle menu on FAB click
+    fabMain.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        fabMenu.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.fab-container')) {
+            fabMenu.classList.remove('active');
+        }
+    });
+    
+    // Close menu when clicking on a FAB item
+    document.querySelectorAll('.fab-item').forEach(item => {
+        item.addEventListener('click', () => {
+            fabMenu.classList.remove('active');
+        });
+    });
+}
+
+// Initialize FAB
+document.addEventListener('DOMContentLoaded', initFAB);
 
 console.log('HealthFlow AI - Website Loaded Successfully');
