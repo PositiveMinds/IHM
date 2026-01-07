@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="goBack()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Patient Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="patient-detail-container">
+  <div *ngIf="loading" class="loading-container">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <div *ngIf="!loading && patient" class="patient-info">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ patient.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Email:</strong> {{ patient.email }}</p>
+        <p *ngIf="patient.phone"><strong>Phone:</strong> {{ patient.phone }}</p>
+        <p *ngIf="patient.status"><strong>Status:</strong> {{ patient.status }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="!loading && !patient" class="error-state">
+    <p>Patient not found</p>
+  </div>
+</ion-content>

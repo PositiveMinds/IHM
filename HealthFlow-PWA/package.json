@@ -1,0 +1,30 @@
+{
+  "name": "healthflow-pwa",
+  "version": "1.0.0",
+  "description": "HealthFlow Progressive Web App - Mobile version",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "http-server src -p 8000 -c-1 -o",
+    "serve": "http-server src -p 8000",
+    "build": "npm run build:assets",
+    "build:assets": "echo 'Assets ready for production'",
+    "start": "http-server src -p 3000"
+  },
+  "keywords": [
+    "pwa",
+    "progressive-web-app",
+    "mobile",
+    "healthflow",
+    "healthcare"
+  ],
+  "author": "HealthFlow Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "jwt-decode": "^3.1.2"
+  }
+}

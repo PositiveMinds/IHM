@@ -1,0 +1,13 @@
+{
+  "name": "healthflow-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "${BACKEND_URL}"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="settings-container">
+  <ion-list>
+    <ion-item>
+      <ion-label>Enable Notifications</ion-label>
+      <ion-toggle
+        slot="end"
+        [checked]="notificationsEnabled"
+        (ionChange)="toggleNotifications($event)"
+      ></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <div class="logout-section">
+    <ion-button
+      expand="block"
+      color="danger"
+      (click)="handleLogout()"
+      class="logout-button"
+    >
+      Logout
+    </ion-button>
+  </div>
+</ion-content>

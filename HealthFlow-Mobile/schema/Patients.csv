@@ -1,0 +1,6 @@
+patient_id,facility_id,first_name,last_name,date_of_birth,gender,blood_type,phone,email,address,city,state,emergency_contact,emergency_phone,insurance_provider,insurance_id,admission_date,discharge_date,status,created_at
+patient_001,facility_001,John,Doe,1979-05-15,M,O+,555-1001,john.doe@email.com,123 Main Street,New York,NY,Jane Doe,555-2001,Blue Cross,BC123456,2024-01-10,,admitted,2024-01-10
+patient_002,facility_001,Jane,Smith,1986-03-22,F,A-,555-1002,jane.smith@email.com,456 Oak Avenue,New York,NY,Robert Smith,555-2002,United Health,UH234567,2024-01-08,2024-01-12,discharged,2024-01-08
+patient_003,facility_001,Robert,Johnson,1962-11-30,M,B+,555-1003,robert.johnson@email.com,789 Pine Road,New York,NY,Michael Johnson,555-2003,Aetna,AET345678,2024-01-09,,admitted,2024-01-09
+patient_004,facility_002,Sarah,Williams,1995-07-18,F,AB+,555-1004,sarah.williams@email.com,321 Elm Street,Los Angeles,CA,David Williams,555-2004,Kaiser,KAISER456,2024-01-05,2024-01-07,discharged,2024-01-05
+patient_005,facility_002,Michael,Brown,1969-09-25,M,O-,555-1005,michael.brown@email.com,654 Maple Drive,Los Angeles,CA,Jennifer Brown,555-2005,CIGNA,CIGNA567,2024-01-11,,admitted,2024-01-11

@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>AI Analysis</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="analysis-container">
+  <div *ngIf="loading" class="loading-container">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <div *ngIf="!loading && analysisData" class="analysis-content">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Analysis Results</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <pre>{{ analysisData | json }}</pre>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="block" color="success" (click)="runAnalysis()">
+      Run Analysis
+    </ion-button>
+  </div>
+</ion-content>

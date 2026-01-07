@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "HealthFlow AI",
+    "slug": "healthflow-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "ios": {
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.healthflow.mobile"
+    },
+    "android": {
+      "package": "com.healthflow.mobile"
+    },
+    "scheme": "healthflowapp"
+  }
+}

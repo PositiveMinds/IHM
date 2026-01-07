@@ -1,0 +1,4 @@
+hospital_id,name,location,phone,email,created_at
+hosp_1,City Hospital,New York,555-1234,admin@hosp1.com,2024-01-01
+hosp_2,Metro Clinic,Los Angeles,555-5678,admin@hosp2.com,2024-01-01
+hosp_3,Central Medical,Chicago,555-9012,admin@hosp3.com,2024-01-01

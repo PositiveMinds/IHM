@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Patients</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="light">
+    <ion-searchbar
+      [(ngModel)]="searchTerm"
+      (ionChange)="onSearchChange($event)"
+      placeholder="Search patients..."
+    ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="patient-list-container">
+  <div *ngIf="loading" class="loading-container">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <ion-list *ngIf="!loading && patients.length > 0">
+    <ion-item *ngFor="let patient of patients" [button]="true" (click)="viewPatientDetail(patient.id)">
+      <ion-label>
+        <h2>{{ patient.name }}</h2>
+        <p *ngIf="patient.email">{{ patient.email }}</p>
+        <p *ngIf="patient.status" [ngClass]="'status-' + patient.status.toLowerCase()">
+          {{ patient.status }}
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="!loading && patients.length === 0" class="empty-state">
+    <p>No patients found</p>
+  </div>
+</ion-content>

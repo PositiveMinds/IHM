@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Dashboard</ion-title>
+    <ion-button slot="end" fill="clear" (click)="handleLogout()">
+      <ion-text color="danger">Logout</ion-text>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="dashboard-container">
+  <!-- Header with User Info -->
+  <div class="header" *ngIf="userData">
+    <div>
+      <p class="welcome-text">Welcome</p>
+      <p class="user-email">{{ userData.email }}</p>
+    </div>
+  </div>
+
+  <!-- Facility Selector -->
+  <div
+    class="facility-section"
+    *ngIf="userData && userData.facilities && userData.facilities.length > 1"
+  >
+    <h3>Select Facility</h3>
+    <ion-scroll scrollX="true">
+      <div class="facility-buttons">
+        <button
+          *ngFor="let facility of userData.facilities"
+          [class.active]="selectedFacility === facility.facility_id"
+          (click)="handleFacilityChange(facility.facility_id)"
+          class="facility-btn"
+        >
+          <strong>{{ facility.facility_id }}</strong>
+          <small>{{ facility.role }}</small>
+        </button>
+      </div>
+    </ion-scroll>
+  </div>
+
+  <!-- Loading State -->
+  <div *ngIf="loading" class="loading-container">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <!-- Dashboard Cards -->
+  <div *ngIf="!loading && dashboardData" class="cards-section">
+    <h3>Dashboard</h3>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Total Patients</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="card-value">{{ dashboardData.totalPatients || 0 }}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Active Cases</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="card-value">{{ dashboardData.activeCases || 0 }}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button
+      expand="block"
+      color="primary"
+      (click)="viewAllPatients()"
+      class="action-button"
+    >
+      View All Patients
+    </ion-button>
+
+    <ion-button
+      expand="block"
+      color="success"
+      (click)="viewAnalysis()"
+      class="action-button"
+    >
+      AI Analysis
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,128 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+  color: #2c3e50;
+}
+
+/* Ionic Global Overrides */
+ion-app {
+  --ion-background-color: #f5f5f5;
+  --ion-text-color: #2c3e50;
+}
+
+ion-content {
+  --background: #f5f5f5;
+}
+
+ion-toolbar {
+  --background: #fff;
+  --border-color: #e0e0e0;
+  --color: #2c3e50;
+
+  ion-title {
+    font-weight: 600;
+  }
+}
+
+ion-button {
+  --border-radius: 8px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  font-weight: 600;
+  text-transform: none;
+}
+
+ion-button[color='primary'] {
+  --background: #0066cc;
+  --background-hover: #0052a3;
+}
+
+ion-button[color='success'] {
+  --background: #27ae60;
+  --background-hover: #1e8449;
+}
+
+ion-button[color='danger'] {
+  --background: #e74c3c;
+  --background-hover: #c0392b;
+}
+
+ion-input {
+  --background: #fff;
+  --color: #2c3e50;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+ion-card {
+  --background: #fff;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+ion-list {
+  --background: transparent;
+  padding: 0;
+
+  ion-item {
+    --background: #fff;
+    --border-color: #e0e0e0;
+    border-radius: 8px;
+    margin: 8px 16px;
+  }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+
+  &:hover {
+    background: #999;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #7f8c8d;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.p-16 {
+  padding: 16px;
+}
