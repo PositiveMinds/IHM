@@ -4,390 +4,464 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works - HealthFlow AI</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-heartbeat"></i>
-                <span>HealthFlow AI</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                <li><a href="features.html" class="nav-link">Features</a></li>
-                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="mobile-app.html" class="nav-link">Mobile App</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link cta-nav">Get Started</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-heartbeat me-2"></i>HealthFlow AI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="how-it-works.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <div class="page-header bg-gradient py-5">
         <div class="container">
-            <h1>How HealthFlow AI Works</h1>
-            <p>Simple automation that integrates with your existing tools</p>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-2">How HealthFlow AI Works</h1>
+                    <p class="lead text-muted">Simple, powerful automation for healthcare management</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
+    <!-- Process Steps -->
+    <div class="container py-5">
+        <!-- Step 1 -->
+        <div class="row align-items-center mb-5 pb-5 border-bottom">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="position-relative">
+                    <div class="step-number-large">1</div>
+                    <h2 class="fw-bold mb-3">Patient Data Entry</h2>
+                    <p class="lead text-muted mb-4">Import or manually enter patient information into the system</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Quick bulk import from Excel or CSV</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Manual entry for new patients</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Automatic data validation</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Privacy & HIPAA compliance built-in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-primary bg-opacity-10 rounded-4 p-5 text-center">
+                    <i class="fas fa-database fa-5x text-primary"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="row align-items-center mb-5 pb-5 border-bottom">
+            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                <div class="position-relative">
+                    <div class="step-number-large">2</div>
+                    <h2 class="fw-bold mb-3">AI-Powered Analysis</h2>
+                    <p class="lead text-muted mb-4">Our AI engine analyzes patient data and identifies actions</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Smart risk stratification</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Adherence pattern detection</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Predictive analytics</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Automated insights generation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="bg-success bg-opacity-10 rounded-4 p-5 text-center">
+                    <i class="fas fa-brain fa-5x text-success"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="row align-items-center mb-5 pb-5 border-bottom">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="position-relative">
+                    <div class="step-number-large">3</div>
+                    <h2 class="fw-bold mb-3">Automated Notifications</h2>
+                    <p class="lead text-muted mb-4">Intelligent reminders reach patients through their preferred channels</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> SMS & WhatsApp messages</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Appointment reminders</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Medication adherence alerts</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Multi-language support</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-warning bg-opacity-10 rounded-4 p-5 text-center">
+                    <i class="fas fa-bell fa-5x text-warning"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                <div class="position-relative">
+                    <div class="step-number-large">4</div>
+                    <h2 class="fw-bold mb-3">Real-Time Reporting</h2>
+                    <p class="lead text-muted mb-4">Get actionable insights and comprehensive dashboards</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Daily/Weekly/Monthly reports</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Custom data visualizations</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Export to Excel/PDF</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Supervisory dashboards</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="bg-info bg-opacity-10 rounded-4 p-5 text-center">
+                    <i class="fas fa-chart-line fa-5x text-info"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Benefits -->
+    <div class="bg-light py-5">
         <div class="container">
-            <!-- Section Header -->
-            <div class="workflow-header fade-in">
-                <h2 class="section-title">The HealthFlow AI Workflow</h2>
-                <p class="section-subtitle">5 simple steps to transform your healthcare operations</p>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">Key Benefits</h2>
+                <p class="lead text-muted">What HealthFlow AI brings to your facility</p>
             </div>
 
-            <!-- Main Workflow Steps -->
-            <div class="workflow-timeline">
-                <div class="steps-container">
-                    <div class="step step-1 fade-in-left">
-                        <div class="step-badge">
-                            <div class="step-number">1</div>
-                            <div class="step-icon-bg">
-                                <i class="fas fa-database"></i>
-                            </div>
-                        </div>
-                        <div class="step-content">
-                            <h3>Connect Your Data</h3>
-                            <p>Link your Google Sheets patient database. No migration needed.</p>
-                            <div class="step-tags">
-                                <span class="tag">Google Sheets</span>
-                                <span class="tag">No Migration</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step-arrow pulse-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    <div class="step step-2 fade-in-up">
-                        <div class="step-badge">
-                            <div class="step-number">2</div>
-                            <div class="step-icon-bg">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                        </div>
-                        <div class="step-content">
-                            <h3>Intelligent Processing</h3>
-                            <p>AI identifies patients who missed appointments, have high viral loads, and need follow-ups.</p>
-                            <div class="step-tags">
-                                <span class="tag">AI Analysis</span>
-                                <span class="tag">Real-time</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step-arrow pulse-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    <div class="step step-3 fade-in-right">
-                        <div class="step-badge">
-                            <div class="step-number">3</div>
-                            <div class="step-icon-bg">
-                                <i class="fas fa-bell"></i>
-                            </div>
-                        </div>
-                        <div class="step-content">
-                            <h3>Automated Follow-ups</h3>
-                            <p>Personalized WhatsApp and email reminders sent automatically to patients.</p>
-                            <div class="step-tags">
-                                <span class="tag">WhatsApp</span>
-                                <span class="tag">Email</span>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card border-0 h-100">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-clock fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5 class="card-title fw-bold">Save Time</h5>
+                                    <p class="card-text text-muted">Free up 12-15 hours per week per staff member</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="steps-container">
-                    <div class="step step-4 fade-in-left">
-                        <div class="step-badge">
-                            <div class="step-number">4</div>
-                            <div class="step-icon-bg">
-                                <i class="fas fa-file-chart-line"></i>
-                            </div>
-                        </div>
-                        <div class="step-content">
-                            <h3>Weekly Reports</h3>
-                            <p>Automated supervisor reports with AI-generated insights delivered to your inbox.</p>
-                            <div class="step-tags">
-                                <span class="tag">Automated</span>
-                                <span class="tag">Insights</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step-arrow pulse-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    <div class="step step-5 fade-in-up">
-                        <div class="step-badge">
-                            <div class="step-number">5</div>
-                            <div class="step-icon-bg">
-                                <i class="fas fa-heart-pulse"></i>
-                            </div>
-                        </div>
-                        <div class="step-content">
-                            <h3>Better Outcomes</h3>
-                            <p>Improved patient adherence, reduced defaults, and better health outcomes.</p>
-                            <div class="step-tags">
-                                <span class="tag">Higher Engagement</span>
-                                <span class="tag">Better Health</span>
+                <div class="col-lg-6">
+                    <div class="card border-0 h-100">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-chart-line fa-2x text-success me-3"></i>
+                                <div>
+                                    <h5 class="card-title fw-bold">Improve Outcomes</h5>
+                                    <p class="card-text text-muted">Increase medication adherence and reduce no-shows</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Key Features Section -->
-            <div class="features-section">
-                <div class="features-header fade-in">
-                    <h3>Powerful Features Built In</h3>
-                    <p>Everything you need to succeed with advanced capabilities</p>
-                    <div class="features-divider"></div>
+                <div class="col-lg-6">
+                    <div class="card border-0 h-100">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-users fa-2x text-warning me-3"></i>
+                                <div>
+                                    <h5 class="card-title fw-bold">Better Care</h5>
+                                    <p class="card-text text-muted">Enable proactive, data-driven patient management</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="features-grid">
-                    <div class="feature-item fade-in">
-                        <div class="feature-wrapper">
-                            <div class="feature-icon-container">
-                                <div class="feature-icon ai-powered">
-                                    <i class="fas fa-robot"></i>
-                                </div>
-                                <div class="feature-glow ai-powered"></div>
-                            </div>
-                            <h4>AI-Powered Intelligence</h4>
-                            <p>OpenAI integration for intelligent patient insights and predictive analytics</p>
-                            <ul class="feature-benefits">
-                                <li><i class="fas fa-check-circle"></i> Automated patient analysis</li>
-                                <li><i class="fas fa-check-circle"></i> Predictive alerts</li>
-                                <li><i class="fas fa-check-circle"></i> Smart recommendations</li>
-                            </ul>
-                            <span class="feature-badge">Advanced</span>
-                        </div>
-                    </div>
 
-                    <div class="feature-item fade-in">
-                        <div class="feature-wrapper">
-                            <div class="feature-icon-container">
-                                <div class="feature-icon multi-channel">
-                                    <i class="fas fa-message"></i>
+                <div class="col-lg-6">
+                    <div class="card border-0 h-100">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-lock fa-2x text-info me-3"></i>
+                                <div>
+                                    <h5 class="card-title fw-bold">Stay Compliant</h5>
+                                    <p class="card-text text-muted">HIPAA-compliant with enterprise security</p>
                                 </div>
-                                <div class="feature-glow multi-channel"></div>
                             </div>
-                            <h4>Multi-Channel Outreach</h4>
-                            <p>WhatsApp, Email, and SMS notifications reach patients where they are</p>
-                            <ul class="feature-benefits">
-                                <li><i class="fas fa-check-circle"></i> WhatsApp integration</li>
-                                <li><i class="fas fa-check-circle"></i> Email campaigns</li>
-                                <li><i class="fas fa-check-circle"></i> SMS reminders</li>
-                            </ul>
-                            <span class="feature-badge">Core</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-item fade-in">
-                        <div class="feature-wrapper">
-                            <div class="feature-icon-container">
-                                <div class="feature-icon secure">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-                                <div class="feature-glow secure"></div>
-                            </div>
-                            <h4>HIPAA Compliant</h4>
-                            <p>Enterprise-grade security with full data encryption and compliance</p>
-                            <ul class="feature-benefits">
-                                <li><i class="fas fa-check-circle"></i> End-to-end encryption</li>
-                                <li><i class="fas fa-check-circle"></i> HIPAA certified</li>
-                                <li><i class="fas fa-check-circle"></i> Regular audits</li>
-                            </ul>
-                            <span class="feature-badge">Security</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-item fade-in">
-                        <div class="feature-wrapper">
-                            <div class="feature-icon-container">
-                                <div class="feature-icon integration">
-                                    <i class="fas fa-plug"></i>
-                                </div>
-                                <div class="feature-glow integration"></div>
-                            </div>
-                            <h4>Easy Integration</h4>
-                            <p>Works seamlessly with Google Sheets, no technical skills required</p>
-                            <ul class="feature-benefits">
-                                <li><i class="fas fa-check-circle"></i> One-click setup</li>
-                                <li><i class="fas fa-check-circle"></i> Google Sheets compatible</li>
-                                <li><i class="fas fa-check-circle"></i> Zero migration</li>
-                            </ul>
-                            <span class="feature-badge">Quick Setup</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-item fade-in">
-                        <div class="feature-wrapper">
-                            <div class="feature-icon-container">
-                                <div class="feature-icon insights">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <div class="feature-glow insights"></div>
-                            </div>
-                            <h4>Real-Time Analytics</h4>
-                            <p>Interactive dashboard with key metrics and live patient status updates</p>
-                            <ul class="feature-benefits">
-                                <li><i class="fas fa-check-circle"></i> Live dashboards</li>
-                                <li><i class="fas fa-check-circle"></i> Custom reports</li>
-                                <li><i class="fas fa-check-circle"></i> Data visualization</li>
-                            </ul>
-                            <span class="feature-badge">Insights</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-item fade-in">
-                        <div class="feature-wrapper">
-                            <div class="feature-icon-container">
-                                <div class="feature-icon customizable">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="feature-glow customizable"></div>
-                            </div>
-                            <h4>Fully Customizable</h4>
-                            <p>Adapt workflows and settings to match your facility's unique needs</p>
-                            <ul class="feature-benefits">
-                                <li><i class="fas fa-check-circle"></i> Custom workflows</li>
-                                <li><i class="fas fa-check-circle"></i> Flexible settings</li>
-                                <li><i class="fas fa-check-circle"></i> Scalable design</li>
-                            </ul>
-                            <span class="feature-badge">Flexible</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Implementation Timeline -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-2">Implementation Timeline</h2>
+            <p class="lead text-muted">Get up and running in just 2-4 weeks</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker bg-primary text-white">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h5 class="fw-bold">Week 1: Onboarding</h5>
+                            <p class="text-muted">Demo, setup, and staff training</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker bg-success text-white">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h5 class="fw-bold">Week 2: Data Migration</h5>
+                            <p class="text-muted">Import patient data and configure workflows</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker bg-warning text-white">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h5 class="fw-bold">Week 3: Testing & Customization</h5>
+                            <p class="text-muted">Pilot with small group, final adjustments</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker bg-info text-white">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h5 class="fw-bold">Week 4: Full Launch</h5>
+                            <p class="text-muted">Roll out system-wide with ongoing support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">Common Questions</h2>
+                <p class="lead text-muted">Learn more about how HealthFlow AI works</p>
+            </div>
+
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item border-0 mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            How long does implementation take?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Most facilities are fully operational within 2-4 weeks. The exact timeline depends on data complexity and staff availability.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border-0 mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            What if we don't have existing digital records?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No problem! Our team can help you digitize existing paper records or start fresh with manual entry. We provide data entry support during implementation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border-0 mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Is internet always required?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            The system works with intermittent internet using our offline mode. Data syncs automatically when connectivity is restored.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border-0 mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            Can we integrate with other systems?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! Our API supports integration with EHRs, pharmacy systems, and other healthcare software. Contact our technical team for integration requests.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            How is patient data protected?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We use HIPAA-compliant encryption, secure authentication, regular security audits, and data backup protocols to ensure patient privacy and security.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to See It in Action?</h2>
-            <p>Schedule a personalized demo with our team</p>
-            <a href="contact.html" class="btn btn-large">Schedule Demo</a>
+    <div class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">Ready to See It in Action?</h2>
+            <p class="lead mb-4">Schedule a personalized demo with our team</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Schedule Demo</a>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="bg-dark text-light py-5">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>HealthFlow AI</h4>
-                    <p>Integrated healthcare management platform for HIV, chronic disease, maternal health, and more across Western Uganda.</p>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-heartbeat me-2"></i>HealthFlow AI</h6>
+                    <p class="small text-muted">Integrated healthcare management platform for HIV, chronic disease, maternal health, and more.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="../index.html" class="text-muted text-decoration-none">Home</a></li>
+                        <li><a href="features.html" class="text-muted text-decoration-none">Features</a></li>
+                        <li><a href="pricing.html" class="text-muted text-decoration-none">Pricing</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">HIPAA Compliance</a></li>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-muted text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Terms of Service</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">HIPAA Compliance</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 HealthFlow AI. All rights reserved. | Bringing healthcare into the digital age.</p>
+            <hr class="bg-secondary">
+            <div class="text-center small text-muted">
+                <p>&copy; 2026 HealthFlow AI. All rights reserved. Bringing healthcare into the digital age.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Action Button -->
-    <div class="fab-container">
-        <button class="fab-main" id="fabMain" title="Menu">
-            <i class="fas fa-plus"></i>
-        </button>
-        <div class="fab-menu" id="fabMenu">
-            <a href="contact.html" class="fab-item" title="Contact Us">
-                <i class="fas fa-envelope"></i>
-                <span>Contact</span>
-            </a>
-            <a href="dashboard.html" class="fab-item" title="View Dashboard">
-                <i class="fas fa-chart-line"></i>
-                <span>Dashboard</span>
-            </a>
-            <a href="mobile-app.html" class="fab-item" title="Mobile App">
-                <i class="fas fa-mobile-alt"></i>
-                <span>Mobile App</span>
-            </a>
-            <a href="../index.html" class="fab-item" title="Back to Home">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- Page Loading Animation -->
-    <div id="pageLoader" class="page-loader">
-        <div class="loader-content">
-            <div class="spinner"></div>
-            <p>Loading...</p>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/script.js"></script>
-    <script>
-        // Page Loading Animation
-        const pageLoader = document.getElementById('pageLoader');
-        const loaderMinTime = 1000;
-        let loadStartTime = Date.now();
-
-        function hideLoader() {
-            if (pageLoader) {
-                pageLoader.style.opacity = '0';
-                pageLoader.style.pointerEvents = 'none';
-            }
-            document.body.style.opacity = '1';
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .step-number-large {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 4rem;
+            font-weight: bold;
+            color: rgba(0, 102, 255, 0.1);
+            z-index: 0;
         }
 
-        window.addEventListener('load', function() {
-            const elapsedTime = Date.now() - loadStartTime;
-            const remainingTime = Math.max(0, loaderMinTime - elapsedTime);
-            setTimeout(hideLoader, remainingTime);
-        });
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
 
-        document.addEventListener('click', function(e) {
-            const link = e.target.closest('a');
-            if (link && link.href && !link.target && link.hostname === window.location.hostname) {
-                if (pageLoader) {
-                    document.body.style.opacity = '0';
-                    pageLoader.style.opacity = '1';
-                    pageLoader.style.pointerEvents = 'auto';
-                    loadStartTime = Date.now();
-                }
-            }
-        });
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #0066ff, #0052cc);
+            top: 0;
+        }
 
-        setTimeout(() => {
-            if (pageLoader && pageLoader.style.opacity !== '0') {
-                document.body.style.opacity = '1';
+        .timeline-item {
+            display: flex;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 0;
+            margin-right: auto;
+            width: 45%;
+            padding-right: 50px;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+            margin-right: 0;
+            width: 45%;
+            padding-left: 50px;
+            text-align: left;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 1;
+            box-shadow: 0 0 0 4px #fff, 0 0 0 8px #f0f5ff;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
             }
-        }, loaderMinTime + 100);
-    </script>
+
+            .timeline-item {
+                margin-bottom: 30px;
+            }
+
+            .timeline-marker {
+                left: 20px;
+            }
+
+            .timeline-item .timeline-content {
+                width: calc(100% - 100px) !important;
+                padding-left: 60px !important;
+                padding-right: 0 !important;
+                text-align: left !important;
+                margin: 0 !important;
+            }
+        }
+    </style>
 </body>
 </html>

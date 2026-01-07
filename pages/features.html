@@ -4,529 +4,257 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features - HealthFlow AI</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-heartbeat"></i>
-                <span>HealthFlow AI</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                <li><a href="features.html" class="nav-link">Features</a></li>
-                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="mobile-app.html" class="nav-link">Mobile App</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link cta-nav">Get Started</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-heartbeat me-2"></i>HealthFlow AI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <div class="page-header bg-gradient py-5">
         <div class="container">
-            <h1>Integrated Modules</h1>
-            <p>Complete healthcare solutions for every patient need</p>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-2">Comprehensive Features</h1>
+                    <p class="lead text-muted">Complete healthcare solutions for every patient need</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Integrated Modules Section -->
-    <section id="integrated-modules" class="integrated-modules">
+    <!-- Features Section -->
+    <div class="container py-5">
+        <!-- HIV Management Module -->
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="feature-image-box">
+                    <div class="bg-danger bg-opacity-10 rounded-4 p-5 text-center">
+                        <i class="fas fa-capsules fa-5x text-danger"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <span class="badge bg-danger mb-3">Module</span>
+                <h2 class="fw-bold mb-3">HIV Management</h2>
+                <p class="lead text-muted mb-4">Comprehensive viral load tracking, medication adherence monitoring, and appointment follow-ups</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Viral Load Tracking</strong> - Monitor CD4 counts and viral loads automatically</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Medication Adherence</strong> - Track ART adherence with smart reminders</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Appointment Follow-ups</strong> - Reduce missed clinic visits</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Treatment Outcomes</strong> - Monitor undetectable = untransmittable goals</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Chronic Disease Management -->
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                <div class="feature-image-box">
+                    <div class="bg-warning bg-opacity-10 rounded-4 p-5 text-center">
+                        <i class="fas fa-heartbeat fa-5x text-warning"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <span class="badge bg-warning mb-3">Module</span>
+                <h2 class="fw-bold mb-3">Chronic Disease Management</h2>
+                <p class="lead text-muted mb-4">Proactive management for diabetes, hypertension, and other chronic conditions</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Blood Pressure Tracking</strong> - Monitor and trend hypertension data</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Diabetes Management</strong> - Blood glucose monitoring and HbA1c tracking</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Treatment Compliance</strong> - Automated adherence reminders</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Risk Stratification</strong> - Identify high-risk patients proactively</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Maternal Health -->
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="feature-image-box">
+                    <div class="bg-success bg-opacity-10 rounded-4 p-5 text-center">
+                        <i class="fas fa-baby fa-5x text-success"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <span class="badge bg-success mb-3">Module</span>
+                <h2 class="fw-bold mb-3">Maternal Health</h2>
+                <p class="lead text-muted mb-4">End-to-end support from pregnancy to postnatal care</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Pregnancy Tracking</strong> - Antenatal care scheduling and monitoring</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>PMTCT Program</strong> - Prevention of Mother-to-Child Transmission support</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Postnatal Care</strong> - Postpartum monitoring and infant care</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Nutrition Support</strong> - Track nutritional status and interventions</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Appointment & Medication Management -->
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                <div class="feature-image-box">
+                    <div class="bg-info bg-opacity-10 rounded-4 p-5 text-center">
+                        <i class="fas fa-calendar-alt fa-5x text-info"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <span class="badge bg-info mb-3">Module</span>
+                <h2 class="fw-bold mb-3">Appointment & Medication Management</h2>
+                <p class="lead text-muted mb-4">Smart scheduling and automated medication reminders</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Smart Scheduling</strong> - Automated appointment booking and optimization</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>No-Show Reduction</strong> - SMS/WhatsApp reminders reduce no-shows by 25-40%</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Medication Reminders</strong> - Multi-channel adherence notifications</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> <strong>Refill Management</strong> - Automatic medication refill tracking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Features Grid -->
+    <div class="bg-light py-5">
         <div class="container">
-            <div class="modules-header fade-in">
-                <h2 class="section-title">Integrated Modules</h2>
-                <p>Complete healthcare solutions for every patient need</p>
-                <div class="modules-divider"></div>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">Additional Capabilities</h2>
+                <p class="lead text-muted">Everything you need for integrated healthcare management</p>
             </div>
 
-            <div class="accordion-container">
-                <!-- HIV Management Module -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-icon-section">
-                            <div class="module-icon-wrapper">
-                                <div class="module-icon hiv">
-                                    <i class="fas fa-capsules"></i>
-                                </div>
-                                <div class="module-icon-glow hiv"></div>
-                            </div>
-                        </div>
-                        <div class="accordion-title-section">
-                            <h3>HIV Management</h3>
-                            <p class="accordion-subtitle">Viral load tracking, medication adherence, appointment follow-ups</p>
-                        </div>
-                        <span class="module-badge essential">Essential</span>
-                        <div class="accordion-toggle">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="module-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Viral Load Tracking</p>
-                                    <p class="feature-desc">Monitor CD4 counts and viral loads automatically</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Medication Adherence</p>
-                                    <p class="feature-desc">Track ART adherence with smart reminders</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Appointment Follow-ups</p>
-                                    <p class="feature-desc">Reduce missed clinic visits</p>
-                                </div>
-                            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 feature-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-file-alt fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Automated Reporting</h5>
+                            <p class="card-text text-muted">Generate comprehensive weekly and monthly reports automatically</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Chronic Disease Module -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-icon-section">
-                            <div class="module-icon-wrapper">
-                                <div class="module-icon chronic">
-                                    <i class="fas fa-heartbeat"></i>
-                                </div>
-                                <div class="module-icon-glow chronic"></div>
-                            </div>
-                        </div>
-                        <div class="accordion-title-section">
-                            <h3>Chronic Disease Management</h3>
-                            <p class="accordion-subtitle">Multi-condition tracking, health metrics, medication scheduling</p>
-                        </div>
-                        <span class="module-badge essential">Essential</span>
-                        <div class="accordion-toggle">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="module-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Multi-Condition Tracking</p>
-                                    <p class="feature-desc">Diabetes, hypertension, asthma management</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Health Metrics Monitoring</p>
-                                    <p class="feature-desc">Blood pressure, glucose, weight tracking</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Medication Scheduling</p>
-                                    <p class="feature-desc">Automated prescription refill reminders</p>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 feature-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-chart-line fa-2x text-success mb-3"></i>
+                            <h5 class="card-title">Real-Time Analytics</h5>
+                            <p class="card-text text-muted">Instant insights into patient outcomes and program performance</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Maternal Health Module -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-icon-section">
-                            <div class="module-icon-wrapper">
-                                <div class="module-icon maternal">
-                                    <i class="fas fa-child"></i>
-                                </div>
-                                <div class="module-icon-glow maternal"></div>
-                            </div>
-                        </div>
-                        <div class="accordion-title-section">
-                            <h3>Maternal Health</h3>
-                            <p class="accordion-subtitle">Pregnancy tracking, visit reminders, delivery readiness alerts</p>
-                        </div>
-                        <span class="module-badge essential">Essential</span>
-                        <div class="accordion-toggle">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="module-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Pregnancy Tracking</p>
-                                    <p class="feature-desc">Antenatal and postnatal care management</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Visit Reminders</p>
-                                    <p class="feature-desc">Automated ANC appointment notifications</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Delivery Readiness</p>
-                                    <p class="feature-desc">Alert teams about approaching due dates</p>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 feature-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-bell fa-2x text-warning mb-3"></i>
+                            <h5 class="card-title">Smart Notifications</h5>
+                            <p class="card-text text-muted">Intelligent alerts for critical patient events and milestones</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Appointment Module -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-icon-section">
-                            <div class="module-icon-wrapper">
-                                <div class="module-icon appointment">
-                                    <i class="fas fa-calendar-check"></i>
-                                </div>
-                                <div class="module-icon-glow appointment"></div>
-                            </div>
-                        </div>
-                        <div class="accordion-title-section">
-                            <h3>Appointment Management</h3>
-                            <p class="accordion-subtitle">Automated scheduling, no-show reduction, multi-channel reminders</p>
-                        </div>
-                        <span class="module-badge core">Core</span>
-                        <div class="accordion-toggle">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="module-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Automated Scheduling</p>
-                                    <p class="feature-desc">Smart appointment coordination</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">No-Show Reduction</p>
-                                    <p class="feature-desc">Reduces no-shows by 25-40%</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Multi-Channel Reminders</p>
-                                    <p class="feature-desc">SMS, WhatsApp, and Email notifications</p>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 feature-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-mobile-alt fa-2x text-danger mb-3"></i>
+                            <h5 class="card-title">Mobile App</h5>
+                            <p class="card-text text-muted">Full functionality on iOS and Android devices</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Reporting Module -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-icon-section">
-                            <div class="module-icon-wrapper">
-                                <div class="module-icon reporting">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <div class="module-icon-glow reporting"></div>
-                            </div>
-                        </div>
-                        <div class="accordion-title-section">
-                            <h3>Automated Reporting</h3>
-                            <p class="accordion-subtitle">Weekly reports, custom dashboards, data analytics</p>
-                        </div>
-                        <span class="module-badge core">Core</span>
-                        <div class="accordion-toggle">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="module-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Weekly Reports</p>
-                                    <p class="feature-desc">AI-generated supervisor insights</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Custom Dashboards</p>
-                                    <p class="feature-desc">Real-time KPI monitoring</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Data Analytics</p>
-                                    <p class="feature-desc">Predictive insights for better decisions</p>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 feature-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-lock fa-2x text-info mb-3"></i>
+                            <h5 class="card-title">HIPAA Compliant</h5>
+                            <p class="card-text text-muted">Enterprise-grade security and data privacy</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Mobile Sync Module -->
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-icon-section">
-                            <div class="module-icon-wrapper">
-                                <div class="module-icon mobile">
-                                    <i class="fas fa-mobile-alt"></i>
-                                </div>
-                                <div class="module-icon-glow mobile"></div>
-                            </div>
-                        </div>
-                        <div class="accordion-title-section">
-                            <h3>Mobile Synchronization</h3>
-                            <p class="accordion-subtitle">Offline access, automatic sync, staff updates</p>
-                        </div>
-                        <span class="module-badge premium">Premium</span>
-                        <div class="accordion-toggle">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="module-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Offline Access</p>
-                                    <p class="feature-desc">Works without internet connection</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Data Sync</p>
-                                    <p class="feature-desc">Automatic sync when connection returns</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <p class="feature-title">Staff Updates</p>
-                                    <p class="feature-desc">Push notifications to healthcare workers</p>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 feature-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-headset fa-2x text-secondary mb-3"></i>
+                            <h5 class="card-title">24/7 Support</h5>
+                            <p class="card-text text-muted">Dedicated support team for troubleshooting and training</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Comparison Table -->
-    <section class="comparison-section">
-        <div class="container">
-            <div class="comparison-header fade-in">
-                <h2 class="section-title">Module Availability by Plan</h2>
-                <p>See which modules are included in each pricing plan</p>
-                <div class="comparison-divider"></div>
-            </div>
-            
-            <div class="table-wrapper">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th class="module-name">Module</th>
-                            <th class="plan-column starter-col">
-                                <div class="plan-header">
-                                    <span class="plan-name">Starter</span>
-                                    <span class="plan-price">Entry Level</span>
-                                </div>
-                            </th>
-                            <th class="plan-column professional-col">
-                                <div class="plan-header">
-                                    <span class="plan-name">Professional</span>
-                                    <span class="plan-price">Most Popular</span>
-                                </div>
-                            </th>
-                            <th class="plan-column enterprise-col">
-                                <div class="plan-header">
-                                    <span class="plan-name">Enterprise</span>
-                                    <span class="plan-price">Full Access</span>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="available">
-                            <td class="module-name"><i class="fas fa-capsules"></i> HIV Management</td>
-                            <td class="status"><i class="fas fa-check-circle"></i></td>
-                            <td class="status"><i class="fas fa-check-circle"></i></td>
-                            <td class="status"><i class="fas fa-check-circle"></i></td>
-                        </tr>
-                        <tr class="available">
-                            <td class="module-name"><i class="fas fa-heartbeat"></i> Chronic Disease</td>
-                            <td class="status"><i class="fas fa-check-circle"></i></td>
-                            <td class="status"><i class="fas fa-check-circle"></i></td>
-                            <td class="status"><i class="fas fa-check-circle"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="module-name"><i class="fas fa-child"></i> Maternal Health</td>
-                            <td class="status unavailable"><i class="fas fa-times-circle"></i></td>
-                            <td class="status available"><i class="fas fa-check-circle"></i></td>
-                            <td class="status available"><i class="fas fa-check-circle"></i></td>
-                        </tr>
-                        <tr class="available">
-                            <td class="module-name"><i class="fas fa-calendar-check"></i> Appointment Management</td>
-                            <td class="status"><i class="fas fa-check-circle"></i></td>
-                            <td class="status"><i class="fas fa-check-circle"></i></td>
-                            <td class="status"><i class="fas fa-check-circle"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="module-name"><i class="fas fa-chart-line"></i> Automated Reporting</td>
-                            <td class="status unavailable"><i class="fas fa-times-circle"></i></td>
-                            <td class="status available"><i class="fas fa-check-circle"></i></td>
-                            <td class="status available"><i class="fas fa-check-circle"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="module-name"><i class="fas fa-mobile-alt"></i> Mobile Synchronization</td>
-                            <td class="status unavailable"><i class="fas fa-times-circle"></i></td>
-                            <td class="status unavailable"><i class="fas fa-times-circle"></i></td>
-                            <td class="status available"><i class="fas fa-check-circle"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Which Features Does Your Facility Need?</h2>
-            <p>Get personalized recommendations based on your specific requirements</p>
-            <a href="contact.html" class="btn btn-large">Get Recommendation</a>
+    <div class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">Ready to Transform Your Healthcare?</h2>
+            <p class="lead mb-4">Start your free trial and see the difference HealthFlow AI makes</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Schedule Demo Today</a>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="bg-dark text-light py-5">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>HealthFlow AI</h4>
-                    <p>Integrated healthcare management platform for HIV, chronic disease, maternal health, and more across Western Uganda.</p>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-heartbeat me-2"></i>HealthFlow AI</h6>
+                    <p class="small text-muted">Integrated healthcare management platform for HIV, chronic disease, maternal health, and more.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="../index.html" class="text-muted text-decoration-none">Home</a></li>
+                        <li><a href="how-it-works.html" class="text-muted text-decoration-none">How It Works</a></li>
+                        <li><a href="pricing.html" class="text-muted text-decoration-none">Pricing</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">HIPAA Compliance</a></li>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-muted text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Terms of Service</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">HIPAA Compliance</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 HealthFlow AI. All rights reserved. | Bringing healthcare into the digital age.</p>
+            <hr class="bg-secondary">
+            <div class="text-center small text-muted">
+                <p>&copy; 2026 HealthFlow AI. All rights reserved. Bringing healthcare into the digital age.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Action Button -->
-    <div class="fab-container">
-        <button class="fab-main" id="fabMain" title="Menu">
-            <i class="fas fa-plus"></i>
-        </button>
-        <div class="fab-menu" id="fabMenu">
-            <a href="contact.html" class="fab-item" title="Contact Us">
-                <i class="fas fa-envelope"></i>
-                <span>Contact</span>
-            </a>
-            <a href="dashboard.html" class="fab-item" title="View Dashboard">
-                <i class="fas fa-chart-line"></i>
-                <span>Dashboard</span>
-            </a>
-            <a href="mobile-app.html" class="fab-item" title="Mobile App">
-                <i class="fas fa-mobile-alt"></i>
-                <span>Mobile App</span>
-            </a>
-            <a href="../index.html" class="fab-item" title="Back to Home">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- Page Loading Animation -->
-    <div id="pageLoader" class="page-loader">
-        <div class="loader-content">
-            <div class="spinner"></div>
-            <p>Loading...</p>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/script.js"></script>
-    <script>
-        // Page Loading Animation
-        const pageLoader = document.getElementById('pageLoader');
-        const loaderMinTime = 1000;
-        let loadStartTime = Date.now();
-
-        function hideLoader() {
-            if (pageLoader) {
-                pageLoader.style.opacity = '0';
-                pageLoader.style.pointerEvents = 'none';
-            }
-            document.body.style.opacity = '1';
-        }
-
-        window.addEventListener('load', function() {
-            const elapsedTime = Date.now() - loadStartTime;
-            const remainingTime = Math.max(0, loaderMinTime - elapsedTime);
-            setTimeout(hideLoader, remainingTime);
-        });
-
-        document.addEventListener('click', function(e) {
-            const link = e.target.closest('a');
-            if (link && link.href && !link.target && link.hostname === window.location.hostname) {
-                if (pageLoader) {
-                    document.body.style.opacity = '0';
-                    pageLoader.style.opacity = '1';
-                    pageLoader.style.pointerEvents = 'auto';
-                    loadStartTime = Date.now();
-                }
-            }
-        });
-
-        setTimeout(() => {
-            if (pageLoader && pageLoader.style.opacity !== '0') {
-                document.body.style.opacity = '1';
-            }
-        }, loaderMinTime + 100);
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

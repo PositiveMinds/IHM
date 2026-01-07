@@ -3,284 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - HealthFlow AI</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>About Us - HealthFlow AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-heartbeat"></i>
-                <span>HealthFlow AI</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                <li><a href="features.html" class="nav-link">Features</a></li>
-                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="mobile-app.html" class="nav-link">Mobile App</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link cta-nav">Get Started</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-heartbeat me-2"></i>HealthFlow AI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <div class="page-header bg-gradient py-5">
         <div class="container">
-            <h1>About HealthFlow AI</h1>
-            <p>Transforming healthcare through intelligent automation</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text fade-in-left">
-                    <h2>Our Mission</h2>
-                    <p>We're on a mission to eliminate the administrative burden that keeps healthcare workers from doing what they do best: caring for patients.</p>
-                    <p>Healthcare facilities in Western Uganda face overwhelming workloads managing HIV, chronic disease, maternal health, and medication adherence. Our platform automates these processes, freeing up 12-15 hours per week so healthcare teams can focus on patient care.</p>
-                </div>
-                <div class="about-image fade-in-right">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="Healthcare Team" class="about-img">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-2">About HealthFlow AI</h1>
+                    <p class="lead text-muted">Transforming healthcare management with AI-powered automation</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Why Choose Section -->
-    <section class="trust">
-        <div class="container">
-            <h2 class="section-title">Why Choose HealthFlow AI?</h2>
-            
-            <div class="trust-grid">
-                <div class="trust-card fade-in-left">
-                    <div class="trust-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Purpose-Built for HIV Care</h3>
-                    <p>Not a generic tool. Every feature is designed specifically for HIV patient management workflows in resource-constrained settings.</p>
+    <!-- Mission Statement -->
+    <div class="container py-5">
+        <div class="row align-items-center g-5 mb-5">
+            <div class="col-lg-6">
+                <div class="bg-primary bg-opacity-10 rounded-4 p-5" style="min-height: 300px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-heartbeat fa-10x text-primary opacity-25"></i>
                 </div>
-                <div class="trust-card fade-in-up">
-                    <div class="trust-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Data Security First</h3>
-                    <p>HIPAA-compliant. Your patient data is encrypted, backed up, and protected. We take privacy seriously.</p>
-                </div>
-                <div class="trust-card fade-in-right">
-                    <div class="trust-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Local Support</h3>
-                    <p>WhatsApp, phone, and email support in English and local languages. We understand your context.</p>
-                </div>
-                <div class="trust-card fade-in-left">
-                    <div class="trust-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Training & Onboarding</h3>
-                    <p>Free training for your team. We ensure successful implementation, not just software delivery.</p>
-                </div>
-                <div class="trust-card fade-in-up">
-                    <div class="trust-icon">
-                        <i class="fas fa-sync"></i>
-                    </div>
-                    <h3>Continuous Improvement</h3>
-                    <p>Regular updates based on user feedback. Your success is our success.</p>
-                </div>
-                <div class="trust-card fade-in-right">
-                    <div class="trust-icon">
-                        <i class="fas fa-money-bill-wave"></i>
-                    </div>
-                    <h3>Proven ROI</h3>
-                    <p>70% cheaper than EHR systems. Most customers recover their investment in the first month.</p>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-3">Our Mission</h2>
+                <p class="lead mb-4">To revolutionize healthcare delivery across Africa by automating administrative burden and enabling healthcare professionals to focus on patient care.</p>
+                <p class="text-muted mb-4">We believe that healthcare technology should be accessible, affordable, and impactful. HealthFlow AI is built specifically for resource-limited healthcare settings in Western Uganda and beyond.</p>
+                <div class="alert alert-info border-0">
+                    <p class="mb-0"><i class="fas fa-lightbulb me-2"></i> <strong>Empowering healthcare teams to save 12-15 hours weekly and transform patient outcomes.</strong></p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Impact Section -->
-    <section class="impact-section">
+    <!-- Core Values -->
+    <div class="bg-light py-5">
         <div class="container">
-            <h2 class="section-title">Our Impact</h2>
-            <div class="impact-grid">
-                <div class="impact-card slide-in-left">
-                    <div class="impact-number">50+</div>
-                    <p>Healthcare facilities trust us</p>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">Our Core Values</h2>
+                <p class="lead text-muted">Guiding principles that drive everything we do</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 values-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title fw-bold">Patient-Centric</h5>
+                            <p class="card-text text-muted">Every feature is designed with the patient and healthcare worker in mind</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="impact-card slide-in-left">
-                    <div class="impact-number">125,000+</div>
-                    <p>Patients managed daily</p>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 values-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-lock fa-2x text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">Secure & Compliant</h5>
+                            <p class="card-text text-muted">HIPAA-compliant with enterprise-grade security and data privacy</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="impact-card slide-in-left">
-                    <div class="impact-number">95%</div>
-                    <p>User satisfaction rate</p>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 values-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-rocket fa-2x text-warning mb-3"></i>
+                            <h5 class="card-title fw-bold">Innovation</h5>
+                            <p class="card-text text-muted">Continuously evolving with cutting-edge AI and machine learning</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="impact-card slide-in-left">
-                    <div class="impact-number">2.5M+</div>
-                    <p>Hours saved for healthcare workers</p>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 values-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-globe fa-2x text-info mb-3"></i>
+                            <h5 class="card-title fw-bold">Accessibility</h5>
+                            <p class="card-text text-muted">Affordable solutions designed for facilities with limited budgets</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 values-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-handshake fa-2x text-danger mb-3"></i>
+                            <h5 class="card-title fw-bold">Partnership</h5>
+                            <p class="card-text text-muted">We succeed when our partners succeed - long-term relationships matter</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 values-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-chart-line fa-2x text-secondary mb-3"></i>
+                            <h5 class="card-title fw-bold">Measurable Impact</h5>
+                            <p class="card-text text-muted">Data-driven approach to demonstrate real healthcare improvements</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Core Values Section -->
-    <section class="values-section">
-        <div class="container">
-            <h2 class="section-title">Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card fade-in">
-                    <h3>Patient-Centered</h3>
-                    <p>Everything we build is designed to improve patient outcomes and health equity in resource-limited settings.</p>
+    <!-- Impact Statistics -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-2">Our Impact</h2>
+            <p class="lead text-muted">Making a real difference in healthcare delivery</p>
+        </div>
+
+        <div class="row g-4 text-center">
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4">
+                    <h3 class="display-5 fw-bold text-primary">2,450+</h3>
+                    <p class="text-muted">Active Patients</p>
+                    <small class="text-muted">Across all facilities</small>
                 </div>
-                <div class="value-card fade-in">
-                    <h3>Transparency</h3>
-                    <p>We believe in clear communication, honest pricing, and transparent relationships with our partners.</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4">
+                    <h3 class="display-5 fw-bold text-success">12-15</h3>
+                    <p class="text-muted">Hours Saved Weekly</p>
+                    <small class="text-muted">Per healthcare worker</small>
                 </div>
-                <div class="value-card fade-in">
-                    <h3>Excellence</h3>
-                    <p>We're committed to delivering the highest quality product and support for healthcare teams across Uganda.</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4">
+                    <h3 class="display-5 fw-bold text-warning">94%</h3>
+                    <p class="text-muted">Medication Adherence</p>
+                    <small class="text-muted">Across programs</small>
                 </div>
-                <div class="value-card fade-in">
-                    <h3>Innovation</h3>
-                    <p>We continuously innovate to stay ahead of healthcare challenges and leverage AI for better patient care.</p>
-                </div>
-                <div class="value-card fade-in">
-                    <h3>Integrity</h3>
-                    <p>We handle patient data with the utmost care, respecting privacy and security at every level.</p>
-                </div>
-                <div class="value-card fade-in">
-                    <h3>Community</h3>
-                    <p>We're invested in the success of healthcare teams and facilities in Western Uganda and beyond.</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4">
+                    <h3 class="display-5 fw-bold text-info">25-40%</h3>
+                    <p class="text-muted">No-Show Reduction</p>
+                    <small class="text-muted">With smart reminders</small>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Team Section -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">Our Team</h2>
+                <p class="lead text-muted">Dedicated professionals passionate about healthcare transformation</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 text-center">
+                        <div class="card-body">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-5 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user fa-2x text-primary"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Dr. Sarah Ochieng</h5>
+                            <p class="text-muted small mb-2">Co-founder & CEO</p>
+                            <p class="card-text text-muted small">10+ years in healthcare technology and public health</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 text-center">
+                        <div class="card-body">
+                            <div class="bg-success bg-opacity-10 rounded-circle p-5 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user fa-2x text-success"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">James Kabali</h5>
+                            <p class="text-muted small mb-2">Co-founder & CTO</p>
+                            <p class="card-text text-muted small">Expert in AI/ML and scalable healthcare systems</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 text-center">
+                        <div class="card-body">
+                            <div class="bg-warning bg-opacity-10 rounded-circle p-5 mx-auto mb-3" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user fa-2x text-warning"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Grace Namulemi</h5>
+                            <p class="text-muted small mb-2">Head of Clinical Operations</p>
+                            <p class="card-text text-muted small">Clinical background and healthcare delivery expertise</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Join Facilities Transforming Healthcare</h2>
-            <p>Let us help you automate administrative tasks and focus on patient care</p>
-            <a href="contact.html" class="btn btn-large">Get Started Today</a>
+    <div class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">Join Us in Transforming Healthcare</h2>
+            <p class="lead mb-4">Help us make a difference in healthcare delivery across Western Uganda</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Get Started Today</a>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="bg-dark text-light py-5">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>HealthFlow AI</h4>
-                    <p>Integrated healthcare management platform for HIV, chronic disease, maternal health, and more across Western Uganda.</p>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-heartbeat me-2"></i>HealthFlow AI</h6>
+                    <p class="small text-muted">Integrated healthcare management platform for HIV, chronic disease, maternal health, and more.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="../index.html" class="text-muted text-decoration-none">Home</a></li>
+                        <li><a href="how-it-works.html" class="text-muted text-decoration-none">How It Works</a></li>
+                        <li><a href="pricing.html" class="text-muted text-decoration-none">Pricing</a></li>
+                        <li><a href="features.html" class="text-muted text-decoration-none">Features</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">HIPAA Compliance</a></li>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-muted text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Terms of Service</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">HIPAA Compliance</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 HealthFlow AI. All rights reserved. | Bringing healthcare into the digital age.</p>
+            <hr class="bg-secondary">
+            <div class="text-center small text-muted">
+                <p>&copy; 2026 HealthFlow AI. All rights reserved. Bringing healthcare into the digital age.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Action Button -->
-    <div class="fab-container">
-        <button class="fab-main" id="fabMain" title="Menu">
-            <i class="fas fa-plus"></i>
-        </button>
-        <div class="fab-menu" id="fabMenu">
-            <a href="contact.html" class="fab-item" title="Contact Us">
-                <i class="fas fa-envelope"></i>
-                <span>Contact</span>
-            </a>
-            <a href="how-it-works.html" class="fab-item" title="How It Works">
-                <i class="fas fa-play-circle"></i>
-                <span>How It Works</span>
-            </a>
-            <a href="pricing.html" class="fab-item" title="View Pricing">
-                <i class="fas fa-dollar-sign"></i>
-                <span>Pricing</span>
-            </a>
-            <a href="../index.html" class="fab-item" title="Back to Home">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- Page Loading Animation -->
-    <div id="pageLoader" class="page-loader">
-        <div class="loader-content">
-            <div class="spinner"></div>
-            <p>Loading...</p>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/script.js"></script>
-    <script>
-        // Page Loading Animation
-        const pageLoader = document.getElementById('pageLoader');
-        const loaderMinTime = 1000;
-        let loadStartTime = Date.now();
-
-        function hideLoader() {
-            if (pageLoader) {
-                pageLoader.style.opacity = '0';
-                pageLoader.style.pointerEvents = 'none';
-            }
-            document.body.style.opacity = '1';
-        }
-
-        window.addEventListener('load', function() {
-            const elapsedTime = Date.now() - loadStartTime;
-            const remainingTime = Math.max(0, loaderMinTime - elapsedTime);
-            setTimeout(hideLoader, remainingTime);
-        });
-
-        document.addEventListener('click', function(e) {
-            const link = e.target.closest('a');
-            if (link && link.href && !link.target && link.hostname === window.location.hostname) {
-                if (pageLoader) {
-                    document.body.style.opacity = '0';
-                    pageLoader.style.opacity = '1';
-                    pageLoader.style.pointerEvents = 'auto';
-                    loadStartTime = Date.now();
-                }
-            }
-        });
-
-        setTimeout(() => {
-            if (pageLoader && pageLoader.style.opacity !== '0') {
-                document.body.style.opacity = '1';
-            }
-        }, loaderMinTime + 100);
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
