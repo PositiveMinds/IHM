@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="login-container">
+  <div class="header">
+    <h1>HealthFlow AI</h1>
+    <p>Multi-Facility Health Management</p>
+  </div>
+
+  <div class="login-section">
+    <div class="form-group">
+      <label>Email</label>
+      <ion-input
+        [(ngModel)]="email"
+        [disabled]="loading"
+        type="email"
+        placeholder="Enter your email"
+        clearInput
+      ></ion-input>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <ion-input
+        [(ngModel)]="password"
+        [disabled]="loading"
+        type="password"
+        placeholder="Enter your password"
+      ></ion-input>
+    </div>
+
+    <ion-button
+      [disabled]="loading"
+      (click)="handleLogin()"
+      expand="block"
+      color="primary"
+      class="login-button"
+    >
+      <span *ngIf="!loading">Login</span>
+      <ion-spinner *ngIf="loading" name="dots"></ion-spinner>
+    </ion-button>
+
+    <p class="disclaimer">Your credentials are encrypted and secure</p>
+  </div>
+</ion-content>

@@ -1,0 +1,38 @@
+.settings-container {
+  --background: #f5f5f5;
+
+  ion-list {
+    --background: transparent;
+    margin-top: 12px;
+
+    ion-item {
+      --background: #fff;
+      margin-bottom: 8px;
+      margin-left: 16px;
+      margin-right: 16px;
+      padding-left: 0;
+      padding-right: 0;
+      border-radius: 8px;
+
+      ion-label {
+        color: #2c3e50;
+      }
+
+      ion-toggle {
+        --handle-background: #fff;
+        --handle-background-checked: #fff;
+        --background-checked: #0066cc;
+      }
+    }
+  }
+
+  .logout-section {
+    padding: 16px;
+    margin-top: 24px;
+
+    .logout-button {
+      height: 50px;
+      font-weight: 600;
+    }
+  }
+}

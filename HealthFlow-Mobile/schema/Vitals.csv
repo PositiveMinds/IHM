@@ -1,0 +1,6 @@
+vital_id,facility_id,patient_id,case_id,heart_rate,blood_pressure_sys,blood_pressure_dia,temperature,respiratory_rate,oxygen_saturation,weight,height,recorded_at,recorded_by
+vital_001,facility_001,patient_001,case_001,78,145,92,37.2,16,98,82,175,2024-01-12T10:30:00,user_003
+vital_002,facility_001,patient_001,case_001,75,142,90,37.0,16,99,82,175,2024-01-11T14:15:00,user_003
+vital_003,facility_001,patient_003,case_003,88,138,88,38.5,22,95,75,178,2024-01-12T09:00:00,user_003
+vital_004,facility_002,patient_004,case_004,72,120,78,36.8,15,98,65,165,2024-01-07T11:45:00,user_005
+vital_005,facility_002,patient_005,case_005,76,125,80,37.1,16,99,72,170,2024-01-12T16:20:00,user_005

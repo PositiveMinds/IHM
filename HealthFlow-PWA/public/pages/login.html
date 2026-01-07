@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - HealthFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            padding: 1rem;
+        }
+        .login-card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 450px;
+            animation: slideUp 0.5s ease-out;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .login-header {
+            text-align: center;
+            padding: 2rem 1.5rem 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .login-logo {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .login-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .login-subtitle {
+            color: #6c757d;
+            margin: 0;
+        }
+        .form-input {
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e0e0e0;
+            font-size: 1rem;
+        }
+        .form-input:focus {
+            border-color: #0066cc;
+            box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+        }
+        .demo-banner {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 4px solid #f57c00;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .demo-banner-title {
+            font-weight: 700;
+            color: #e65100;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .demo-code {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            word-break: break-all;
+        }
+        .form-check-input:checked {
+            background-color: #0066cc;
+            border-color: #0066cc;
+        }
+        .login-button {
+            padding: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            margin-top: 1rem;
+            width: 100%;
+        }
+        .login-footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #f0f0f0;
+        }
+        .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+        }
+        .error-message {
+            background: #fee;
+            border-left: 4px solid #dc3545;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            color: #dc3545;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <!-- Header -->
+        <div class="login-header">
+            <div class="login-logo">❤️</div>
+            <h1 class="login-title">HealthFlow</h1>
+            <p class="login-subtitle">Healthcare Management System</p>
+        </div>
+
+        <div class="card-body p-4">
+            <!-- Demo Credentials Banner -->
+            <div class="demo-banner">
+                <div class="demo-banner-title">📌 Demo Credentials</div>
+                <p class="small mb-0 text-dark">
+                    <strong>Email:</strong><br>
+                    <div class="demo-code">demo@healthflow.com</div>
+                    <strong>Password:</strong><br>
+                    <div class="demo-code">demo123</div>
+                </p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm">
+                <!-- Error Message -->
+                <div id="loginError" class="error-message d-none">
+                    <div class="d-flex align-items-start">
+                        <i class="fas fa-exclamation-circle me-2 mt-1"></i>
+                        <div id="errorMessage"></div>
+                    </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">
+                        <i class="fas fa-envelope me-2"></i>Email Address
+                    </label>
+                    <input 
+                        type="email" 
+                        class="form-input form-control" 
+                        id="email" 
+                        placeholder="demo@healthflow.com"
+                        autocomplete="email"
+                        required
+                    />
+                </div>
+
+                <!-- Password Field -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">
+                        <i class="fas fa-lock me-2"></i>Password
+                    </label>
+                    <input 
+                        type="password" 
+                        class="form-input form-control" 
+                        id="password" 
+                        placeholder="••••••••"
+                        autocomplete="current-password"
+                        required
+                    />
+                </div>
+
+                <!-- Remember Me -->
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">
+                        Keep me signed in
+                    </label>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="btn btn-primary btn-lg login-button" id="loginBtn">
+                    <i class="fas fa-sign-in-alt me-2"></i>Sign In Securely
+                </button>
+            </form>
+
+            <!-- Security Info -->
+            <div class="security-badge">
+                <i class="fas fa-lock"></i>
+                <span>HIPAA Compliant • End-to-End Encrypted</span>
+            </div>
+
+            <!-- Footer -->
+            <div class="login-footer">
+                <p class="mb-0">Healthcare professionals only.<br>By logging in, you agree to our Terms of Service.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/modules/storage.js" defer></script>
+    <script src="/js/modules/auth.js" defer></script>
+    <script src="/js/modules/notifications.js" defer></script>
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const rememberMeCheckbox = document.getElementById('rememberMe');
+        const errorDiv = document.getElementById('loginError');
+        const errorMessage = document.getElementById('errorMessage');
+        const loginBtn = document.getElementById('loginBtn');
+
+        // Load remembered email
+        const rememberedEmail = localStorage.getItem('rememberedEmail');
+        if (rememberedEmail) {
+            emailInput.value = rememberedEmail;
+            rememberMeCheckbox.checked = true;
+        } else {
+            emailInput.value = 'demo@healthflow.com';
+        }
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            errorDiv.classList.add('d-none');
+            loginBtn.disabled = true;
+            const originalText = loginBtn.innerHTML;
+            loginBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Signing in...';
+
+            try {
+                // Remember email if checked
+                if (rememberMeCheckbox.checked) {
+                    localStorage.setItem('rememberedEmail', emailInput.value);
+                } else {
+                    localStorage.removeItem('rememberedEmail');
+                }
+
+                // Demo login
+                if (window.auth) {
+                    const result = await window.auth.login(emailInput.value, passwordInput.value);
+                    if (result.success) {
+                        if (window.notifications) {
+                            window.notifications.showToast('✓ Login successful!', 'success');
+                        }
+                        setTimeout(() => {
+                            if (window.app) {
+                                window.app.navigate('dashboard');
+                            }
+                        }, 500);
+                    } else {
+                        errorDiv.classList.remove('d-none');
+                        errorMessage.textContent = result.error || 'Invalid credentials. Please try again.';
+                    }
+                } else {
+                    console.warn('Auth module not loaded');
+                }
+            } catch (error) {
+                errorDiv.classList.remove('d-none');
+                errorMessage.textContent = error.message || 'Login failed. Please check your connection.';
+            } finally {
+                loginBtn.disabled = false;
+                loginBtn.innerHTML = originalText;
+            }
+        });
+
+        // Clear error on input
+        [emailInput, passwordInput].forEach(input => {
+            input.addEventListener('focus', () => {
+                errorDiv.classList.add('d-none');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+facility_id,name,address,city,state,phone,email,facility_type,total_beds,established_date,is_active
+facility_001,City Hospital,123 Medical Plaza Drive,New York,NY,555-0100,admin@cityhospital.com,Hospital,500,2020-01-15,true
+facility_002,Metro Clinic,456 Health Street,Los Angeles,CA,555-0200,admin@metroclinic.com,Clinic,100,2021-06-20,true
+facility_003,Central Medical Center,789 Care Boulevard,Chicago,IL,555-0300,admin@centralmedical.com,Medical Center,350,2019-03-10,true

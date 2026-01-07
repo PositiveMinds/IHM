@@ -1,0 +1,6 @@
+case_id,facility_id,patient_id,assigned_doctor_id,diagnosis,primary_complaint,severity,status,admission_date,discharge_date,treatment_notes,created_at,updated_at
+case_001,facility_001,patient_001,user_002,Hypertension,High blood pressure,moderate,active,2024-01-10,,Started on antihypertensive medication,2024-01-10,2024-01-12
+case_002,facility_001,patient_002,user_002,Type 2 Diabetes,Elevated glucose levels,moderate,closed,2024-01-08,2024-01-12,Managed with diet and medication adjustments,2024-01-08,2024-01-12
+case_003,facility_001,patient_003,user_002,Pneumonia,Severe cough and fever,high,active,2024-01-09,,On IV antibiotics,2024-01-09,2024-01-12
+case_004,facility_002,patient_004,user_004,Acute gastroenteritis,Nausea and diarrhea,moderate,closed,2024-01-05,2024-01-07,Fluids and supportive care provided,2024-01-05,2024-01-07
+case_005,facility_002,patient_005,user_004,Migraine disorder,Chronic headaches,mild,active,2024-01-11,,Preventive therapy initiated,2024-01-11,2024-01-12

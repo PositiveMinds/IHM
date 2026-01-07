@@ -1,0 +1,6 @@
+staff_id,hospital_id,name,role,email,phone,created_at
+staff_1,hosp_1,Dr. Smith,doctor,smith@hosp1.com,555-1111,2024-01-01
+staff_2,hosp_1,Nurse Johnson,nurse,johnson@hosp1.com,555-2222,2024-01-01
+staff_3,hosp_1,Dr. Williams,doctor,williams@hosp1.com,555-3333,2024-01-02
+staff_4,hosp_2,Dr. Brown,doctor,brown@hosp2.com,555-4444,2024-01-01
+staff_5,hosp_2,Nurse Davis,nurse,davis@hosp2.com,555-5555,2024-01-01

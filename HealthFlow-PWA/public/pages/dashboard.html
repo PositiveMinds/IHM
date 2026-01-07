@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - HealthFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <style>
+        :root {
+            --bs-primary: #0066cc;
+            --bs-success: #27ae60;
+            --bs-warning: #f39c12;
+            --bs-danger: #e74c3c;
+        }
+        .sidebar-nav {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+        .sidebar-nav .nav-link {
+            color: rgba(255,255,255,0.8);
+            padding: 0.75rem 1.5rem;
+            border-left: 3px solid transparent;
+        }
+        .sidebar-nav .nav-link:hover,
+        .sidebar-nav .nav-link.active {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            border-left-color: white;
+        }
+        .kpi-card {
+            border: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .kpi-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0066cc, #0052a3);
+        }
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0066cc;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .stat-change {
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        .stat-change.positive {
+            color: #27ae60;
+        }
+        .stat-change.negative {
+            color: #e74c3c;
+        }
+        .welcome-section {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
+        }
+        .chart-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        .badge-custom {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .alert-item {
+            padding: 1.5rem;
+            border-left: 4px solid #0066cc;
+            border-radius: 8px;
+            background: #f8f9ff;
+            margin-bottom: 1rem;
+        }
+        .alert-item.warning {
+            border-left-color: #f39c12;
+            background: #fffbf0;
+        }
+        .alert-item.danger {
+            border-left-color: #e74c3c;
+            background: #fff5f5;
+        }
+        .nav-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar-nav d-none d-lg-block" style="width: 250px;">
+            <div class="nav-header">
+                <h5 class="text-white mb-0"><i class="fas fa-heartbeat me-2"></i>HealthFlow</h5>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" data-page="dashboard">
+                        <i class="fas fa-chart-line me-2"></i>Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="patients">
+                        <i class="fas fa-users me-2"></i>Patients
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="settings">
+                        <i class="fas fa-cog me-2"></i>Settings
+                    </a>
+                </li>
+                <li class="nav-item mt-4">
+                    <a class="nav-link text-danger" href="#" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt me-2"></i>Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-grow-1 p-4">
+            <!-- Mobile Header -->
+            <div class="d-lg-none mb-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0"><i class="fas fa-heartbeat me-2"></i>HealthFlow</h4>
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#navOffcanvas">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Welcome Banner -->
+            <div class="welcome-section">
+                <h2 class="mb-2">Welcome back, Dr. Sarah 👋</h2>
+                <p class="mb-0 opacity-90">Here's what's happening with your patients today</p>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card kpi-card">
+                        <div class="card-body">
+                            <p class="stat-label">Active Patients</p>
+                            <div class="stat-value">1,247</div>
+                            <div class="stat-change positive">
+                                <i class="fas fa-arrow-up me-1"></i>45 Today
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card kpi-card">
+                        <div class="card-body">
+                            <p class="stat-label">Completed Appointments</p>
+                            <div class="stat-value">89</div>
+                            <div class="stat-change positive">
+                                <i class="fas fa-arrow-up me-1"></i>12 Today
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card kpi-card">
+                        <div class="card-body">
+                            <p class="stat-label">Adherence Rate</p>
+                            <div class="stat-value">94%</div>
+                            <div class="stat-change positive">
+                                <i class="fas fa-arrow-up me-1"></i>2% Week
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card kpi-card">
+                        <div class="card-body">
+                            <p class="stat-label">HIV Patients</p>
+                            <div class="stat-value">423</div>
+                            <div class="stat-change positive">
+                                Undetectable: 89%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-8">
+                    <div class="card chart-card">
+                        <div class="card-header border-0 pb-0">
+                            <h5 class="card-title mb-0">Weekly Patient Visits</h5>
+                        </div>
+                        <div class="card-body">
+                            <svg viewBox="0 0 400 150" preserveAspectRatio="none" style="width: 100%; height: 250px;">
+                                <defs>
+                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#0066cc;stop-opacity:0.3" />
+                                        <stop offset="100%" style="stop-color:#0066cc;stop-opacity:0" />
+                                    </linearGradient>
+                                </defs>
+                                <line x1="0" y1="120" x2="400" y2="120" stroke="#e8e8e8" stroke-width="1"/>
+                                <line x1="0" y1="90" x2="400" y2="90" stroke="#e8e8e8" stroke-width="1"/>
+                                <line x1="0" y1="60" x2="400" y2="60" stroke="#e8e8e8" stroke-width="1"/>
+                                <line x1="0" y1="30" x2="400" y2="30" stroke="#e8e8e8" stroke-width="1"/>
+                                <path d="M 0 60 L 57 30 L 114 20 L 171 40 L 228 15 L 285 35 L 342 12 L 400 25 L 400 150 L 0 150 Z" fill="url(#grad1)" stroke="none"/>
+                                <polyline points="0,60 57,30 114,20 171,40 228,15 285,35 342,12 400,25" fill="none" stroke="#0066cc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="0" cy="60" r="3" fill="#0066cc"/><circle cx="57" cy="30" r="3" fill="#0066cc"/>
+                                <circle cx="114" cy="20" r="3" fill="#0066cc"/><circle cx="171" cy="40" r="3" fill="#0066cc"/>
+                                <circle cx="228" cy="15" r="3" fill="#0066cc"/><circle cx="285" cy="35" r="3" fill="#0066cc"/>
+                                <circle cx="342" cy="12" r="3" fill="#0066cc"/><circle cx="400" cy="25" r="3" fill="#0066cc"/>
+                            </svg>
+                            <div class="d-flex justify-content-between text-muted small mt-3">
+                                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span>
+                                <span>Fri</span><span>Sat</span><span>Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card chart-card">
+                        <div class="card-header border-0 pb-0">
+                            <h5 class="card-title mb-0">Adherence Trend</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <div style="display: inline-block;">
+                                <svg viewBox="0 0 100 100" style="width: 120px; height: 120px;">
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#e8e8e8" stroke-width="8"/>
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#27ae60" stroke-width="8" 
+                                            stroke-dasharray="212 284" stroke-dashoffset="0" transform="rotate(-90 50 50)"/>
+                                </svg>
+                                <p class="text-muted small mt-2">↑ 2% this week</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patient Distribution -->
+            <div class="row g-4 mb-4">
+                <div class="col-12">
+                    <div class="card chart-card">
+                        <div class="card-header border-0 pb-0">
+                            <h5 class="card-title mb-0">Patient Distribution by Condition</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-bold">HIV Positive</span>
+                                    <span class="text-muted">1,592 (65%)</span>
+                                </div>
+                                <div class="progress" role="progressbar" style="height: 8px;">
+                                    <div class="progress-bar" style="width: 65%; background: linear-gradient(90deg, #0066cc, #0052a3);"></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-bold">Chronic Disease</span>
+                                    <span class="text-muted">490 (20%)</span>
+                                </div>
+                                <div class="progress" role="progressbar" style="height: 8px;">
+                                    <div class="progress-bar bg-success" style="width: 20%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-bold">Maternal Health</span>
+                                    <span class="text-muted">368 (15%)</span>
+                                </div>
+                                <div class="progress" role="progressbar" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" style="width: 15%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerts Section -->
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="mb-0">Recent Alerts & Actions</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">View All →</a>
+                    </div>
+
+                    <div class="alert-item danger">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-exclamation-circle me-3 mt-1"></i>
+                            <div>
+                                <h6 class="mb-1">23 Missed Appointments</h6>
+                                <p class="mb-0 small text-muted">Action required: Send follow-up reminders to patients</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert-item warning">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-warning me-3 mt-1"></i>
+                            <div>
+                                <h6 class="mb-1">Low Medication Adherence</h6>
+                                <p class="mb-0 small text-muted">5 patients showing below 80% adherence rate</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert-item">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-info-circle me-3 mt-1"></i>
+                            <div>
+                                <h6 class="mb-1">Weekly Report Ready</h6>
+                                <p class="mb-0 small text-muted">Your performance report has been generated</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Offcanvas Navigation -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="navOffcanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" data-page="dashboard" data-bs-dismiss="offcanvas">
+                        <i class="fas fa-chart-line me-2"></i>Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="patients" data-bs-dismiss="offcanvas">
+                        <i class="fas fa-users me-2"></i>Patients
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="settings" data-bs-dismiss="offcanvas">
+                        <i class="fas fa-cog me-2"></i>Settings
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/modules/storage.js" defer></script>
+    <script src="/js/modules/auth.js" defer></script>
+    <script src="/js/modules/notifications.js" defer></script>
+    <script>
+        // Navigation
+        document.querySelectorAll('[data-page]').forEach(el => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = el.dataset.page;
+                if (page && window.app) {
+                    window.app.navigate(page);
+                }
+            });
+        });
+
+        // Logout
+        document.getElementById('logoutBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (confirm('Are you sure you want to logout?')) {
+                if (window.auth) {
+                    window.auth.logout();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
